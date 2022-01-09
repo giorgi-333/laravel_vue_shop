@@ -21,14 +21,14 @@ class todo extends Controller
 //
 //        DB::table('list')->where("#")->insert($data1);
 
-        $student = new TodoMig;
+        $item = new TodoMig;
 
 
 
         $data = $request->all();
 
-        $student->text = $data["re"];
-        $student->save();
+        $item->text = $data["re"];
+        $item->save();
 
 //        return response()->json([
 //            'message' => 'New post created'

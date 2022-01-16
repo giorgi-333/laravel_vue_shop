@@ -36,6 +36,7 @@ export default {
 
             axios.post('/api/image/',data)
                 .then((response) => {
+                    alert("აიტვირთა!")
                     console.log(response.data);
                 })
         }

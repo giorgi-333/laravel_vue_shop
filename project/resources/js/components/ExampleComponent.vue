@@ -3,8 +3,8 @@
     .container
         .head Todo App
         .add-cont
-            input(v-model="value")
-            .add +
+            input(v-model="value" @keyup.enter="addTodo")
+            .add(@click="addTodo") +
         .list
             .item(v-for="item in todo") {{item.text}}
 </template>
@@ -26,6 +26,14 @@ export default {
             axios.get('/api/todo')
                 .then((response) => {
                     this.todo = response.data
+                })
+        },
+        addTodo() {
+            axios.post('/api/todo',{text: this.value})
+                .then((response) => {
+                    this.todo.push({text: this.value})
+                    this.value = null
+                    console.log(response.data)
                 })
         }
     }
@@ -87,6 +95,8 @@ export default {
         }
         .list {
             font-size: 22px;
+            max-height: 400px;
+            overflow-y: auto;
 
             .item {
                 cursor: pointer;

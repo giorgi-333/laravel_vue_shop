@@ -14,25 +14,12 @@ class todo extends Controller
     }
     public function store(Request $request)
     {
-
-//        $data1=array(
-//            'text' => 'house@example.com'
-//        );
-//
-//        DB::table('list')->where("#")->insert($data1);
-
         $item = new TodoMig;
-
-
 
         $data = $request->all();
 
-        $item->text = $data["re"];
+        $item->text = $data["text"];
         $item->save();
-
-//        return response()->json([
-//            'message' => 'New post created'
-//        ]);
 
         return $data;
     }

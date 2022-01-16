@@ -5291,6 +5291,21 @@ __webpack_require__.r(__webpack_exports__);
       axios.get('/api/todo').then(function (response) {
         _this.todo = response.data;
       });
+    },
+    addTodo: function addTodo() {
+      var _this2 = this;
+
+      axios.post('/api/todo', {
+        text: this.value
+      }).then(function (response) {
+        _this2.todo.push({
+          text: _this2.value
+        });
+
+        _this2.value = null; // this.fetchAllTodo()
+
+        console.log(response.data);
+      });
     }
   }
 });
@@ -10465,7 +10480,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n.page .container {\n  padding: 20px;\n  border: 1px solid #0a53be;\n  border-radius: 4px;\n  box-shadow: 2px 2px 10px rgba(10, 83, 190, 0.57);\n}\n.page .container .head {\n  font-size: 30px;\n}\n.page .container .add-cont {\n  display: grid;\n  grid-template-columns: 270px 39px;\n  grid-column-gap: 5px;\n  margin-top: 5px;\n  margin-bottom: 10px;\n}\n.page .container .add-cont input {\n  font-size: 22px;\n  padding: 5px 10px;\n  border: 1px solid #0a53be;\n  border-radius: 4px;\n}\n.page .container .add-cont input:focus {\n  outline: none;\n}\n.page .container .add-cont .add {\n  cursor: pointer;\n  line-height: 39px;\n  background-color: #0a53be;\n  border-radius: 4px;\n  color: white;\n  text-align: center;\n  font-size: 30px;\n}\n.page .container .list {\n  font-size: 22px;\n}\n.page .container .list .item {\n  cursor: pointer;\n  margin: 5px 0;\n  padding: 8px 15px;\n  box-shadow: 2px 2px 10px rgba(245, 245, 245, 0.62);\n  background-color: #0a53be;\n  border-radius: 4px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n.page .container {\n  padding: 20px;\n  border: 1px solid #0a53be;\n  border-radius: 4px;\n  box-shadow: 2px 2px 10px rgba(10, 83, 190, 0.57);\n}\n.page .container .head {\n  font-size: 30px;\n}\n.page .container .add-cont {\n  display: grid;\n  grid-template-columns: 270px 39px;\n  grid-column-gap: 5px;\n  margin-top: 5px;\n  margin-bottom: 10px;\n}\n.page .container .add-cont input {\n  font-size: 22px;\n  padding: 5px 10px;\n  border: 1px solid #0a53be;\n  border-radius: 4px;\n}\n.page .container .add-cont input:focus {\n  outline: none;\n}\n.page .container .add-cont .add {\n  cursor: pointer;\n  line-height: 39px;\n  background-color: #0a53be;\n  border-radius: 4px;\n  color: white;\n  text-align: center;\n  font-size: 30px;\n}\n.page .container .list {\n  font-size: 22px;\n  max-height: 400px;\n  overflow-y: auto;\n}\n.page .container .list .item {\n  cursor: pointer;\n  margin: 5px 0;\n  padding: 8px 15px;\n  box-shadow: 2px 2px 10px rgba(245, 245, 245, 0.62);\n  background-color: #0a53be;\n  border-radius: 4px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -28535,6 +28550,15 @@ var render = function () {
           ],
           domProps: { value: _vm.value },
           on: {
+            keyup: function ($event) {
+              if (
+                !$event.type.indexOf("key") &&
+                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+              ) {
+                return null
+              }
+              return _vm.addTodo.apply(null, arguments)
+            },
             input: function ($event) {
               if ($event.target.composing) {
                 return
@@ -28543,7 +28567,9 @@ var render = function () {
             },
           },
         }),
-        _c("div", { staticClass: "add" }, [_vm._v("+")]),
+        _c("div", { staticClass: "add", on: { click: _vm.addTodo } }, [
+          _vm._v("+"),
+        ]),
       ]),
       _c(
         "div",

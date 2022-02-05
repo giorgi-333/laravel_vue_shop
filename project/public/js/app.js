@@ -5353,7 +5353,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       todo: [],
-      value: null
+      value: null,
+      doneTodos: []
     };
   },
   mounted: function mounted() {
@@ -5365,6 +5366,10 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get('/api/todo').then(function (response) {
         _this.todo = response.data;
+
+        _this.todo.forEach(function (item) {
+          if (item.done) _this.doneTodos.push(item.id);
+        });
       });
     },
     addTodo: function addTodo() {
@@ -5378,8 +5383,19 @@ __webpack_require__.r(__webpack_exports__);
         });
 
         _this2.value = null;
-        console.log(response.data);
       });
+    },
+    doneTodo: function doneTodo(id) {
+      var idIndex = this.doneTodos.indexOf(id);
+
+      if (idIndex === -1) {
+        this.doneTodos.push(id);
+      } else {
+        this.doneTodos.splice(idIndex, 1);
+      }
+    },
+    isDone: function isDone(id) {
+      return this.doneTodos.includes(id);
     }
   }
 });
@@ -10564,7 +10580,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n.page .container {\n  padding: 20px;\n  border: 1px solid #0a53be;\n  border-radius: 4px;\n  box-shadow: 2px 2px 10px rgba(10, 83, 190, 0.57);\n}\n.page .container .head {\n  font-size: 30px;\n}\n.page .container .add-cont {\n  display: grid;\n  grid-template-columns: 270px 39px;\n  grid-column-gap: 5px;\n  margin-top: 5px;\n  margin-bottom: 10px;\n}\n.page .container .add-cont input {\n  font-size: 22px;\n  padding: 5px 10px;\n  border: 1px solid #0a53be;\n  border-radius: 4px;\n}\n.page .container .add-cont input:focus {\n  outline: none;\n}\n.page .container .add-cont .add {\n  cursor: pointer;\n  line-height: 39px;\n  background-color: #0a53be;\n  border-radius: 4px;\n  color: white;\n  text-align: center;\n  font-size: 30px;\n}\n.page .container .list {\n  font-size: 22px;\n  max-height: 400px;\n  overflow-y: auto;\n}\n.page .container .list .item {\n  cursor: pointer;\n  margin: 5px 0;\n  padding: 8px 15px;\n  box-shadow: 2px 2px 10px rgba(245, 245, 245, 0.62);\n  background-color: #0a53be;\n  border-radius: 4px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n.page .container {\n  padding: 20px;\n  border: 1px solid #0a53be;\n  border-radius: 4px;\n  box-shadow: 2px 2px 10px rgba(10, 83, 190, 0.57);\n}\n.page .container .head {\n  font-size: 30px;\n}\n.page .container .add-cont {\n  display: grid;\n  grid-template-columns: 270px 39px;\n  grid-column-gap: 5px;\n  margin-top: 5px;\n  margin-bottom: 10px;\n}\n.page .container .add-cont input {\n  font-size: 22px;\n  padding: 5px 10px;\n  border: 1px solid #0a53be;\n  border-radius: 4px;\n}\n.page .container .add-cont input:focus {\n  outline: none;\n}\n.page .container .add-cont .add {\n  cursor: pointer;\n  line-height: 39px;\n  background-color: #0a53be;\n  border-radius: 4px;\n  color: white;\n  text-align: center;\n  font-size: 30px;\n}\n.page .container .list {\n  font-size: 22px;\n  max-height: 400px;\n  overflow-y: auto;\n}\n.page .container .list .item {\n  cursor: pointer;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n  margin: 5px 0;\n  padding: 8px 15px;\n  box-shadow: 2px 2px 10px rgba(245, 245, 245, 0.62);\n  background-color: #0a53be;\n  border-radius: 4px;\n}\n.page .container .list .item.done {\n  text-decoration: line-through;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -28984,7 +29000,19 @@ var render = function () {
         "div",
         { staticClass: "list" },
         _vm._l(_vm.todo, function (item) {
-          return _c("div", { staticClass: "item" }, [_vm._v(_vm._s(item.text))])
+          return _c(
+            "div",
+            {
+              staticClass: "item",
+              class: { done: _vm.isDone(item.id) },
+              on: {
+                click: function ($event) {
+                  return _vm.doneTodo(item.id)
+                },
+              },
+            },
+            [_vm._v(_vm._s(item.text))]
+          )
         }),
         0
       ),

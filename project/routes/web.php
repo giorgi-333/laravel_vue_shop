@@ -22,7 +22,8 @@ use App\Http\Controllers\UploadImageContr;
 
 //todo
 Route::get('/api/todo', [todo::class, 'index']);
-Route::post('/api/todo',[todo::class, 'store'] );
+Route::post('/api/todo',[todo::class, 'store']);
+Route::put('/api/todo',[todo::class, 'update']);
 
 //images
 //Route::get('/api/image', [todo::class, 'index']);

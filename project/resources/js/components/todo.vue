@@ -6,7 +6,7 @@
             input(v-model="value" @keyup.enter="addTodo")
             .add(@click="addTodo") +
         .list
-            .item(v-for="item in todo") {{item.text}}
+            .item(v-for="item in todo" @click="doneTodo(item.id)" :class="{'done': isDone(item.id)}") {{item.text}}
 </template>
 
 <script>
@@ -16,6 +16,7 @@ export default {
         return {
             todo: [],
             value: null,
+            doneTodos: []
         }
     },
     mounted() {
@@ -26,6 +27,10 @@ export default {
             axios.get('/api/todo')
                 .then((response) => {
                     this.todo = response.data
+                    this.todo.forEach(item => {
+                        if(item.done)
+                            this.doneTodos.push(item.id)
+                    })
                 })
         },
         addTodo() {
@@ -33,8 +38,19 @@ export default {
                 .then((response) => {
                     this.todo.push({text: this.value})
                     this.value = null
-                    console.log(response.data)
                 })
+        },
+        doneTodo(id) {
+            const idIndex = this.doneTodos.indexOf(id)
+            if(idIndex === -1) {
+                this.doneTodos.push(id)
+            }
+            else {
+                this.doneTodos.splice(idIndex, 1)
+            }
+        },
+        isDone(id) {
+            return this.doneTodos.includes(id)
         }
     }
 }
@@ -100,11 +116,16 @@ export default {
 
             .item {
                 cursor: pointer;
+                user-select: none;
                 margin: 5px 0;
                 padding: 8px 15px;
                 box-shadow: 2px 2px 10px rgba(245, 245, 245, 0.62);
                 background-color: #0a53be;
                 border-radius: 4px;
+
+                &.done {
+                    text-decoration: line-through;
+                }
             }
         }
     }

@@ -2,6 +2,7 @@
 header
     router-link(:to="{name: 'todo'}") todo
     router-link(:to="{name: 'imageUpload'}") image upload
+    router-link(:to="{name: 'meet'}") meet
 </template>
 
 <script>

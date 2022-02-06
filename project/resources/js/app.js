@@ -6,8 +6,9 @@ import VueRouter from "vue-router";
 
 // import pages
 import Website from "./pages/Website";
-import Todo from "./components/todo";
-import ImageUpload from "./components/ImageUpload";
+import Todo from "./pages/Todo";
+import ImageUpload from "./pages/ImageUpload";
+import Meet from "./pages/Meet";
 
 Vue.use(VueRouter);
 
@@ -25,6 +26,11 @@ const routes = [
                 path: 'image-upload',
                 name: 'imageUpload',
                 component: ImageUpload
+            },
+            {
+                path: 'meet',
+                name: 'meet',
+                component: Meet
             }
         ]
     }

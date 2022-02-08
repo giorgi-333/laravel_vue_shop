@@ -5361,16 +5361,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Meet",
+  data: function data() {
+    return {
+      checked: null
+    };
+  },
   computed: {
     ages: function ages() {
-      var ages = [];
+      var ages = ["ასაკი"];
 
       for (var age = 18; age < 40; age++) {
         ages.push(age);
       }
 
+      ages.push("40+");
       return ages;
     }
   }
@@ -10643,7 +10654,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".meet[data-v-e09d7860] {\n  width: 100%;\n  max-width: -webkit-max-content;\n  max-width: -moz-max-content;\n  max-width: max-content;\n  height: 100vh;\n  margin: 0 auto;\n  padding: 30px;\n  display: grid;\n  grid-template-columns: 390px 390px;\n  justify-content: center;\n  align-items: center;\n}\n.meet .desc[data-v-e09d7860] {\n  padding: 20px;\n}\n.meet .desc > h1[data-v-e09d7860] {\n  margin-bottom: 40px;\n  font-weight: normal;\n  color: #648dec;\n}\n.meet .desc .together[data-v-e09d7860] {\n  display: grid;\n  grid-template-columns: auto auto;\n  gap: 10px;\n  margin: 20px 0;\n}\n.meet .desc .together img[data-v-e09d7860] {\n  width: 80px;\n  filter: invert(64%) sepia(29%) saturate(6214%) hue-rotate(199deg) brightness(95%) contrast(93%);\n}\n.meet .form[data-v-e09d7860] {\n  height: 474px;\n  padding: 20px;\n  box-shadow: 2px 2px 6px #648dec;\n  border-radius: 4px;\n}\n.meet .form > h1[data-v-e09d7860] {\n  margin-bottom: 20px;\n  font-weight: normal;\n  font-size: 30px;\n  color: rgba(255, 255, 255, 0.84);\n}\n.meet .form .checks[data-v-e09d7860] {\n  display: grid;\n  grid-template-columns: 90px 90px;\n  gap: 10px;\n  justify-content: center;\n}\n.meet .form .checks .check[data-v-e09d7860] {\n  cursor: pointer;\n  height: 40px;\n  line-height: 40px;\n  text-align: center;\n  border: 1px solid white;\n  border-radius: 4px;\n}\n.meet .form .checks .check.girl.checked[data-v-e09d7860] {\n  border-color: rgba(207, 57, 243, 0.68);\n  background-color: rgba(207, 57, 243, 0.68);\n}\n.meet .form input[data-v-e09d7860], .meet .form select[data-v-e09d7860] {\n  width: 100%;\n  height: 50px;\n  background-color: #333;\n  border: 1px solid white;\n  border-radius: 4px;\n  display: block;\n  margin: 15px 0;\n  color: whitesmoke;\n  font-size: 16px;\n  font-family: cursive;\n  padding: 0 10px;\n}\n.meet .form input[data-v-e09d7860]:focus, .meet .form select[data-v-e09d7860]:focus {\n  outline: none;\n}\n.meet .form button[data-v-e09d7860] {\n  margin-top: 75px;\n  cursor: pointer;\n  background-color: #648dec;\n  border: none;\n  width: 100%;\n  height: 50px;\n  border-radius: 10px;\n  color: white;\n  font-size: 22px;\n  font-family: sans-serif;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".cont[data-v-e09d7860] {\n  position: relative;\n  width: 100%;\n  height: 100vh;\n  overflow: hidden;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: #4b55c1;\n}\n.cont > img[data-v-e09d7860] {\n  width: 100%;\n  position: absolute;\n  left: 0;\n  bottom: -70px;\n}\n.cont .meet[data-v-e09d7860] {\n  max-width: -webkit-max-content;\n  max-width: -moz-max-content;\n  max-width: max-content;\n  display: grid;\n  grid-template-columns: 390px 320px;\n  justify-content: center;\n  align-items: center;\n  box-shadow: 2px 2px 6px rgba(51, 51, 51, 0.63);\n  border-radius: 8px;\n  overflow: hidden;\n}\n.cont .meet .desc[data-v-e09d7860] {\n  padding: 20px;\n  background-color: #fff;\n}\n.cont .meet .desc > h1[data-v-e09d7860] {\n  margin-bottom: 40px;\n  font-weight: normal;\n  color: #648dec;\n}\n.cont .meet .desc > p[data-v-e09d7860] {\n  text-align: center;\n}\n.cont .meet .desc .together[data-v-e09d7860] {\n  display: grid;\n  grid-template-columns: auto auto;\n  gap: 10px;\n  margin: 20px 0;\n}\n.cont .meet .desc .together p.active[data-v-e09d7860] {\n  color: #306ef5;\n  font-style: italic;\n}\n.cont .meet .desc .together img[data-v-e09d7860] {\n  width: 80px;\n  filter: invert(64%) sepia(29%) saturate(6214%) hue-rotate(199deg) brightness(95%) contrast(93%);\n}\n.cont .meet .desc .together img.active[data-v-e09d7860] {\n  filter: invert(18%) sepia(1%) saturate(0%) hue-rotate(43deg) brightness(100%) contrast(92%);\n}\n.cont .meet .form[data-v-e09d7860] {\n  height: 474px;\n  padding: 20px 40px;\n  background-color: #4b55c1;\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n}\n.cont .meet .form > h1[data-v-e09d7860] {\n  font-weight: normal;\n  font-size: 22px;\n  color: whitesmoke;\n  text-align: center;\n  font-family: monospace;\n}\n.cont .meet .form .checks[data-v-e09d7860] {\n  display: grid;\n  grid-template-columns: 90px 90px;\n  justify-content: space-evenly;\n}\n.cont .meet .form .checks .check[data-v-e09d7860] {\n  cursor: pointer;\n  height: 40px;\n  line-height: 40px;\n  text-align: center;\n  border: 1px solid #3a44a8;\n  border-radius: 4px;\n  color: white;\n}\n.cont .meet .form .checks .check input[data-v-e09d7860] {\n  margin-right: 5px;\n}\n.cont .meet .form .checks .check.checked[data-v-e09d7860] {\n  border-color: #3a44a8;\n  background-color: #3a44a8;\n}\n.cont .meet .form > input[data-v-e09d7860], .cont .meet .form > select[data-v-e09d7860] {\n  width: 100%;\n  height: 50px;\n  background-color: #3a44a8;\n  border: none;\n  border-radius: 4px;\n  display: block;\n  margin: 15px 0;\n  color: whitesmoke;\n  font-size: 16px;\n  font-family: cursive;\n  padding: 0 10px;\n}\n.cont .meet .form > input[data-v-e09d7860]:focus, .cont .meet .form > select[data-v-e09d7860]:focus {\n  outline: none;\n}\n.cont .meet .form select[data-v-e09d7860] {\n  cursor: pointer;\n}\n.cont .meet .form button[data-v-e09d7860] {\n  cursor: pointer;\n  background-color: #648dec;\n  border: none;\n  width: 100%;\n  height: 50px;\n  border-radius: 10px;\n  color: white;\n  font-size: 22px;\n  font-family: sans-serif;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10691,7 +10702,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\nbody {\n  background-color: #333;\n  color: whitesmoke;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n.dark {\n  background-color: #333;\n  color: whitesmoke;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -29165,21 +29176,57 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "meet" }, [
-    _vm._m(0),
-    _c("div", { staticClass: "form" }, [
-      _c("h1", [_vm._v("ზოგადი მონაცემები")]),
-      _c("input", { attrs: { type: "text", placeholder: "სახელი" } }),
-      _vm._m(1),
-      _c(
-        "select",
-        _vm._l(_vm.ages, function (age) {
-          return _c("option", [_vm._v(_vm._s(age))])
-        }),
-        0
-      ),
-      _c("button", [_vm._v("დაწყება")]),
+  return _c("div", { staticClass: "cont" }, [
+    _c("div", { staticClass: "meet" }, [
+      _vm._m(0),
+      _c("div", { staticClass: "form" }, [
+        _c("h1", [_vm._v("მონაცემები")]),
+        _c("input", { attrs: { type: "text", placeholder: "სახელი" } }),
+        _c("div", { staticClass: "checks" }, [
+          _c(
+            "label",
+            {
+              staticClass: "check boy",
+              class: { checked: _vm.checked === 1 },
+              on: {
+                click: function ($event) {
+                  _vm.checked = 1
+                },
+              },
+            },
+            [
+              _c("input", { attrs: { type: "radio", name: "gender" } }),
+              _c("span", [_vm._v("ბიჭი")]),
+            ]
+          ),
+          _c(
+            "label",
+            {
+              staticClass: "check girl",
+              class: { checked: _vm.checked === 2 },
+              on: {
+                click: function ($event) {
+                  _vm.checked = 2
+                },
+              },
+            },
+            [
+              _c("input", { attrs: { type: "radio", name: "gender" } }),
+              _c("span", [_vm._v("გოგო")]),
+            ]
+          ),
+        ]),
+        _c(
+          "select",
+          _vm._l(_vm.ages, function (age) {
+            return _c("option", [_vm._v(_vm._s(age))])
+          }),
+          0
+        ),
+        _c("button", [_vm._v("დაწყება")]),
+      ]),
     ]),
+    _c("img", { attrs: { src: "/icon/wave.svg" } }),
   ])
 }
 var staticRenderFns = [
@@ -29196,7 +29243,7 @@ var staticRenderFns = [
       ]),
       _c("div", { staticClass: "together" }, [
         _c("img", { attrs: { src: "/icon/love.png" } }),
-        _c("p", [
+        _c("p", { staticClass: "active" }, [
           _vm._v(
             "გაიცანი და მიწერე მარტო მყოფ გოგოებს თუ ბიჭებს, ნებისმიერი ლიმიტის გარეშე."
           ),
@@ -29208,17 +29255,11 @@ var staticRenderFns = [
             "მიიღე მეგობრული მიმოწერები, ასევე შეგიძლიათ დაგვეხმაროთ სპამების დაბლოკვაში, რომ არ მიიღოთ ვირუსული ლინკები"
           ),
         ]),
-        _c("img", { attrs: { src: "/icon/currier.png" } }),
+        _c("img", {
+          staticClass: "active",
+          attrs: { src: "/icon/currier.png" },
+        }),
       ]),
-    ])
-  },
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "checks" }, [
-      _c("div", { staticClass: "check boy" }, [_vm._v("ბიჭი")]),
-      _c("div", { staticClass: "check girl checked" }, [_vm._v("გოგო")]),
     ])
   },
 ]
@@ -29328,7 +29369,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "webisite" },
+    { staticClass: "webisite", class: { dark: _vm.hideHeader } },
     [_vm.hideHeader ? _c("site-header") : _vm._e(), _c("router-view")],
     1
   )

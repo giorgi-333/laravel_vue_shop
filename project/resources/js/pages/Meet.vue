@@ -22,7 +22,7 @@
                     span გოგო
            select
             option(v-for="age in ages") {{ age }}
-           button დაწყება
+           button(@click="startChat") დაწყება
     img(src="/icon/wave.svg")
 </template>
 
@@ -32,6 +32,11 @@ export default {
     data() {
         return {
             checked: null
+        }
+    },
+    methods: {
+        startChat() {
+            this.$router.push({name: "MeetMain"})
         }
     },
     computed: {

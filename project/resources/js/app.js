@@ -9,6 +9,7 @@ import Website from "./pages/Website";
 import Todo from "./pages/Todo";
 import ImageUpload from "./pages/ImageUpload";
 import Meet from "./pages/Meet";
+import MeetMain from "./pages/MeetMain";
 
 Vue.use(VueRouter);
 
@@ -30,7 +31,12 @@ const routes = [
             {
                 path: 'meet',
                 name: 'meet',
-                component: Meet
+                component: Meet,
+            },
+            {
+                path: 'meet-home',
+                name: 'MeetMain',
+                component: MeetMain
             }
         ]
     }

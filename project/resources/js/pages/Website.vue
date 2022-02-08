@@ -14,7 +14,7 @@ export default {
     },
     computed: {
         hideHeader() {
-            return this.$route.name !== "meet"
+            return this.$route.name !== "meet" && this.$route.name !== "MeetMain"
         }
     }
 }
@@ -26,7 +26,7 @@ export default {
     padding: 0;
     box-sizing: border-box;
 }
-body.dark {
+.dark {
     background-color: #333;
     color: whitesmoke;
 }

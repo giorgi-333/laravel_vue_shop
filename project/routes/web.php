@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\todo;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UploadImageContr;
 
 /*
@@ -29,10 +30,15 @@ Route::put('/api/todo',[todo::class, 'update']);
 //Route::get('/api/image', [todo::class, 'index']);
 Route::post('/api/image',[UploadImageContr::class, 'store'] );
 
+// Meet
+Route::post('/api/create-user',[AuthController::class, 'register']);
+
 
 Route::get('/{vue_capture?}', function () {
     return view('welcome');
 })->where('vue_capture', '[\/\w\.-]*');
+
+
 
 
 

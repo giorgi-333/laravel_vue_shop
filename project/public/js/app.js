@@ -5294,9 +5294,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "ActiveUser",
-  props: ["active"]
+  props: ["active", "mini", "id"],
+  methods: {
+    er: function er() {
+      alert(2);
+    }
+  }
 });
 
 /***/ }),
@@ -5312,6 +5318,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _ActiveUser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ActiveUser */ "./resources/js/components/meet/ActiveUser.vue");
 //
 //
 //
@@ -5319,8 +5326,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "Chats"
+  name: "Chats",
+  components: {
+    ActiveUser: _ActiveUser__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  data: function data() {
+    return {
+      active: false
+    };
+  }
 });
 
 /***/ }),
@@ -5491,6 +5511,16 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     ActiveUser: _components_meet_ActiveUser__WEBPACK_IMPORTED_MODULE_0__["default"],
     Chats: _components_meet_Chats__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  data: function data() {
+    return {
+      active: null
+    };
+  },
+  methods: {
+    changeActive: function changeActive(id) {
+      this.active = id;
+    }
   }
 });
 
@@ -10767,7 +10797,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".user[data-v-3d5a12de] {\n  cursor: pointer;\n  width: 100%;\n  padding: 10px;\n  margin-bottom: 3px;\n  background-color: #1a4aa4;\n  display: flex;\n}\n.user.active[data-v-3d5a12de] {\n  background-color: #0b2e83;\n}\n.user img[data-v-3d5a12de] {\n  height: 50px;\n}\n.user .info[data-v-3d5a12de] {\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 25px;\n}\n.user .info i[data-v-3d5a12de] {\n  transform: translateY(15px);\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".user[data-v-3d5a12de] {\n  cursor: pointer;\n  width: 100%;\n  display: flex;\n  align-items: center;\n  padding: 10px;\n  margin-bottom: 3px;\n  background-color: #1a4aa4;\n  color: white;\n}\n.user.active[data-v-3d5a12de] {\n  background-color: #0b2e83;\n}\n.user img[data-v-3d5a12de] {\n  height: 50px;\n}\n.user .info[data-v-3d5a12de] {\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 25px;\n}\n.user .info i[data-v-3d5a12de] {\n  transform: translateY(15px);\n}\n.user.mini[data-v-3d5a12de] {\n  border-radius: 8px;\n  background-color: #5b6d97;\n}\n.user.mini .info[data-v-3d5a12de] {\n  padding-left: 15px;\n}\n.user.mini .info i[data-v-3d5a12de] {\n  display: none;\n}\n.user.mini .unread[data-v-3d5a12de] {\n  color: #50cc0a;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10791,7 +10821,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".imga[data-v-3fbcbf3e] {\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  position: absolute;\n  top: 30%;\n  right: 0;\n  width: 70px;\n  background-color: #1a4aa4;\n  box-shadow: 2px 2px 6px rgba(51, 51, 51, 0.63);\n  border-radius: 30px 0 0 30px;\n}\n.imga .chats[data-v-3fbcbf3e] {\n  position: relative;\n  display: flex;\n  align-items: center;\n}\n.imga .chats span[data-v-3fbcbf3e] {\n  position: absolute;\n  top: 0;\n  right: -4px;\n  width: 20px;\n  height: 20px;\n  background-color: firebrick;\n  border-radius: 50%;\n  text-align: center;\n  color: white;\n  font-weight: bold;\n  z-index: 99;\n  -webkit-animation: rxeva-data-v-3fbcbf3e 0.8s linear infinite alternate;\n          animation: rxeva-data-v-3fbcbf3e 0.8s linear infinite alternate;\n}\n.imga .chats img[data-v-3fbcbf3e] {\n  width: 50px;\n  margin-left: 13px;\n  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(30deg) brightness(111%) contrast(101%);\n}\n@-webkit-keyframes rxeva-data-v-3fbcbf3e {\nfrom {\n    transform: rotate(-30deg);\n}\nto {\n    transform: rotate(20deg) scale(1.2);\n}\n}\n@keyframes rxeva-data-v-3fbcbf3e {\nfrom {\n    transform: rotate(-30deg);\n}\nto {\n    transform: rotate(20deg) scale(1.2);\n}\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".chats-wrapper[data-v-3fbcbf3e] {\n  position: absolute;\n  width: 280px;\n  height: 100%;\n  top: 0;\n  right: 0;\n  transform: translateX(100%);\n  transition: 0.4s;\n  box-shadow: 2px 2px 6px rgba(51, 51, 51, 0.63);\n  border-radius: 10px 0 0 10px;\n  border: 8px solid #5b6d97;\n}\n.chats-wrapper.active[data-v-3fbcbf3e] {\n  transform: translateX(0);\n}\n.chats-wrapper .cont[data-v-3fbcbf3e] {\n  position: relative;\n  height: 100%;\n}\n.chats-wrapper .cont .icon-wrapper[data-v-3fbcbf3e] {\n  cursor: pointer;\n  display: flex;\n  align-items: center;\n  position: absolute;\n  top: 15%;\n  left: -8px;\n  transform: translateX(-100%);\n  width: 70px;\n  background-color: #1a4aa4;\n  box-shadow: 2px 2px 6px rgba(51, 51, 51, 0.63);\n  border-radius: 30px 0 0 30px;\n}\n.chats-wrapper .cont .icon-wrapper .icon[data-v-3fbcbf3e] {\n  position: relative;\n  display: flex;\n  align-items: center;\n}\n.chats-wrapper .cont .icon-wrapper .icon span[data-v-3fbcbf3e] {\n  position: absolute;\n  top: 0;\n  right: -4px;\n  width: 20px;\n  height: 20px;\n  background-color: firebrick;\n  border-radius: 50%;\n  text-align: center;\n  color: white;\n  font-weight: bold;\n  z-index: 99;\n  -webkit-animation: rxeva-data-v-3fbcbf3e 0.8s linear infinite alternate;\n          animation: rxeva-data-v-3fbcbf3e 0.8s linear infinite alternate;\n}\n.chats-wrapper .cont .icon-wrapper .icon img[data-v-3fbcbf3e] {\n  width: 50px;\n  margin-left: 13px;\n  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(30deg) brightness(111%) contrast(101%);\n}\n.chats-wrapper .cont .chats[data-v-3fbcbf3e] {\n  height: 100%;\n  overflow: hidden;\n  padding: 3px;\n}\n@-webkit-keyframes rxeva-data-v-3fbcbf3e {\nfrom {\n    transform: rotate(-30deg);\n}\nto {\n    transform: rotate(20deg) scale(1.2);\n}\n}\n@keyframes rxeva-data-v-3fbcbf3e {\nfrom {\n    transform: rotate(-30deg);\n}\nto {\n    transform: rotate(20deg) scale(1.2);\n}\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10840,7 +10870,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Courgette&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-3447cd29] {\n  position: relative;\n  width: 100%;\n  padding: 30px;\n  height: 100vh;\n  overflow: hidden;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: #4b55c1;\n}\n.wrapper .cont[data-v-3447cd29] {\n  max-width: 1300px;\n  width: 100%;\n  height: 80vh;\n  display: grid;\n  grid-template-columns: 290px 1fr;\n  justify-content: center;\n  align-items: center;\n  box-shadow: 2px 2px 6px rgba(51, 51, 51, 0.63);\n  border-radius: 8px;\n  overflow: hidden;\n}\n.wrapper .cont .left[data-v-3447cd29] {\n  height: 100%;\n  background-color: #0a2a77;\n  color: whitesmoke;\n}\n.wrapper .cont .left .head[data-v-3447cd29] {\n  padding: 20px 8px;\n  background-color: #0b2e83;\n  font-size: 22px;\n  text-align: center;\n}\n.wrapper .cont .left .head b[data-v-3447cd29] {\n  font-size: 20px;\n  display: inline-block;\n  min-width: 35px;\n  height: 35px;\n  padding: 0 5px;\n  line-height: 35px;\n  margin-left: 5px;\n  text-align: center;\n  background-color: #fff;\n  color: #0b2e83;\n  border-radius: 15px;\n  font-family: monospace;\n}\n.wrapper .cont .left .actives[data-v-3447cd29] {\n  height: calc(80vh - 75px);\n  overflow-y: auto;\n}\n.wrapper .cont .right[data-v-3447cd29] {\n  height: 100%;\n  display: grid;\n  grid-template-rows: -webkit-max-content 1fr -webkit-max-content;\n  grid-template-rows: max-content 1fr max-content;\n}\n.wrapper .cont .right .head[data-v-3447cd29] {\n  cursor: pointer;\n  height: 76px;\n  line-height: 76px;\n  padding: 0 28px;\n  background-color: #1a4aa4;\n  font-size: 28px;\n  font-family: \"Courgette\", cursive;\n  text-align: center;\n  color: #fff;\n  box-shadow: 2px 2px 6px rgba(51, 51, 51, 0.63);\n}\n.wrapper .cont .right .mes[data-v-3447cd29] {\n  position: relative;\n  height: 100%;\n  background-color: #fff;\n}\n.wrapper .cont .right .mes h1[data-v-3447cd29] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  cursor: pointer;\n  font-family: cursive;\n  background-color: #0b2e83;\n  box-shadow: 2px 2px 6px rgba(51, 51, 51, 0.63);\n  font-size: 28px;\n  color: white;\n  padding: 5px 15px;\n  border-radius: 8px;\n  margin: 1px;\n}\n.wrapper .cont .right .mes h1 > div[data-v-3447cd29] {\n  display: flex;\n  align-items: center;\n}\n.wrapper .cont .right .mes h1 > div img[data-v-3447cd29] {\n  width: 40px;\n}\n.wrapper .cont .right .mes h1 > div span i[data-v-3447cd29] {\n  font-family: \"Courgette\", cursive;\n  margin-left: 5px;\n  font-size: 16px;\n}\n.wrapper .cont .right .mes h1 > img[data-v-3447cd29] {\n  width: 30px;\n}\n.wrapper .cont .right .sends[data-v-3447cd29] {\n  background-color: #dde7fd;\n  height: 76px;\n  padding: 10px 20px;\n  display: flex;\n  align-items: center;\n}\n.wrapper .cont .right .sends textarea[data-v-3447cd29] {\n  width: 80%;\n  height: 100%;\n  padding: 5px;\n  resize: none;\n  border-radius: 4px;\n}\n.wrapper .cont .right .sends textarea[data-v-3447cd29]:focus {\n  outline: none;\n}\n.wrapper .cont .right .sends img[data-v-3447cd29] {\n  cursor: pointer;\n  width: 40px;\n  margin-left: 90px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".wrapper[data-v-3447cd29] {\n  position: relative;\n  width: 100%;\n  padding: 30px;\n  height: 100vh;\n  overflow: hidden;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: #4b55c1;\n}\n.wrapper .cont[data-v-3447cd29] {\n  max-width: 1300px;\n  width: 100%;\n  height: 80vh;\n  display: grid;\n  grid-template-columns: 290px 1fr;\n  justify-content: center;\n  align-items: center;\n  box-shadow: 2px 2px 6px rgba(51, 51, 51, 0.63);\n  border-radius: 8px;\n  overflow: hidden;\n}\n.wrapper .cont .left[data-v-3447cd29] {\n  height: 100%;\n  background-color: #0a2a77;\n  color: whitesmoke;\n}\n.wrapper .cont .left .head[data-v-3447cd29] {\n  padding: 20px 8px;\n  background-color: #0b2e83;\n  font-size: 22px;\n  text-align: center;\n}\n.wrapper .cont .left .head b[data-v-3447cd29] {\n  font-size: 20px;\n  display: inline-block;\n  min-width: 35px;\n  height: 35px;\n  padding: 0 5px;\n  line-height: 35px;\n  margin-left: 5px;\n  text-align: center;\n  background-color: #fff;\n  color: #0b2e83;\n  border-radius: 15px;\n  font-family: monospace;\n}\n.wrapper .cont .left .actives[data-v-3447cd29] {\n  height: calc(80vh - 75px);\n  overflow-y: auto;\n}\n.wrapper .cont .right[data-v-3447cd29] {\n  height: 100%;\n  display: grid;\n  grid-template-rows: -webkit-max-content 1fr -webkit-max-content;\n  grid-template-rows: max-content 1fr max-content;\n}\n.wrapper .cont .right .head[data-v-3447cd29] {\n  cursor: pointer;\n  height: 76px;\n  line-height: 76px;\n  padding: 0 28px;\n  background-color: #1a4aa4;\n  font-size: 28px;\n  font-family: \"Courgette\", cursive;\n  text-align: center;\n  color: #fff;\n  box-shadow: 2px 2px 6px rgba(51, 51, 51, 0.63);\n}\n.wrapper .cont .right .mes[data-v-3447cd29] {\n  position: relative;\n  height: 100%;\n  background-color: #fff;\n}\n.wrapper .cont .right .mes h1[data-v-3447cd29] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  cursor: pointer;\n  font-family: cursive;\n  background-color: #0b2e83;\n  box-shadow: 2px 2px 6px rgba(51, 51, 51, 0.63);\n  font-size: 28px;\n  color: white;\n  padding: 5px 15px;\n  border-radius: 8px;\n  margin: 1px;\n}\n.wrapper .cont .right .mes h1 > div[data-v-3447cd29] {\n  display: flex;\n  align-items: center;\n}\n.wrapper .cont .right .mes h1 > div img[data-v-3447cd29] {\n  width: 40px;\n}\n.wrapper .cont .right .mes h1 > div span i[data-v-3447cd29] {\n  font-family: \"Courgette\", cursive;\n  margin-left: 5px;\n  font-size: 16px;\n}\n.wrapper .cont .right .mes h1 > img[data-v-3447cd29] {\n  width: 30px;\n}\n.wrapper .cont .right .mes .content[data-v-3447cd29] {\n  position: relative;\n  height: calc(100% - 52px);\n}\n.wrapper .cont .right .sends[data-v-3447cd29] {\n  background-color: #dde7fd;\n  height: 76px;\n  padding: 10px 20px;\n  display: flex;\n  align-items: center;\n}\n.wrapper .cont .right .sends textarea[data-v-3447cd29] {\n  width: 80%;\n  height: 100%;\n  padding: 5px;\n  resize: none;\n  border-radius: 4px;\n}\n.wrapper .cont .right .sends textarea[data-v-3447cd29]:focus {\n  outline: none;\n}\n.wrapper .cont .right .sends img[data-v-3447cd29] {\n  cursor: pointer;\n  width: 40px;\n  margin-left: 90px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -29680,10 +29710,25 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "user", class: { active: _vm.active } }, [
-    _c("img", { attrs: { src: "/icon/girl.png" } }),
-    _vm._m(0),
-  ])
+  return _c(
+    "div",
+    {
+      staticClass: "user",
+      class: { active: _vm.active, mini: _vm.mini },
+      on: {
+        click: function ($event) {
+          return _vm.$emit("changed", _vm.id)
+        },
+      },
+    },
+    [
+      _c("img", { attrs: { src: "/icon/girl.png" } }),
+      _vm._m(0),
+      _vm.mini
+        ? _c("div", { staticClass: "unread" }, [_vm._v("წაუკითხავი")])
+        : _vm._e(),
+    ]
+  )
 }
 var staticRenderFns = [
   function () {
@@ -29718,21 +29763,41 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "imga" }, [
-      _c("div", { staticClass: "chats" }, [
-        _c("span", [_vm._v("!")]),
-        _c("img", { attrs: { src: "/icon/email.png" } }),
+  return _c(
+    "div",
+    { staticClass: "chats-wrapper", class: { active: _vm.active } },
+    [
+      _c("div", { staticClass: "cont" }, [
+        _c("div", { staticClass: "icon-wrapper" }, [
+          _c(
+            "div",
+            {
+              staticClass: "icon",
+              on: {
+                click: function ($event) {
+                  _vm.active = !_vm.active
+                },
+              },
+            },
+            [
+              _c("span", [_vm._v("!")]),
+              _c("img", { attrs: { src: "/icon/email.png" } }),
+            ]
+          ),
+        ]),
+        _c(
+          "div",
+          { staticClass: "chats" },
+          _vm._l(10, function (i) {
+            return _c("ActiveUser", { key: i, attrs: { mini: true } })
+          }),
+          1
+        ),
       ]),
-    ])
-  },
-]
+    ]
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -29905,7 +29970,11 @@ var render = function () {
           "div",
           { staticClass: "actives" },
           _vm._l(14, function (i) {
-            return _c("ActiveUser", { key: i, attrs: { active: i === 4 } })
+            return _c("ActiveUser", {
+              key: i,
+              attrs: { active: i === _vm.active, id: i },
+              on: { changed: _vm.changeActive },
+            })
           }),
           1
         ),
@@ -29913,8 +29982,8 @@ var render = function () {
       _c("div", { staticClass: "right" }, [
         _c("div", { staticClass: "head" }, [_vm._v("contacti.ge")]),
         _c("div", { staticClass: "mes" }, [
-          _c("div", { staticClass: "imga" }, [_c("Chats")], 1),
           _vm._m(1),
+          _c("div", { staticClass: "content" }, [_c("Chats")], 1),
         ]),
         _vm._m(2),
       ]),

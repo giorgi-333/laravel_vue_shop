@@ -6,18 +6,18 @@
                span ონლაინში მყოფი
                b 1199
            .actives
-               ActiveUser(v-for="i in 14" :key="i" :active="i === 4")
+               ActiveUser(v-for="i in 14" :key="i" :active="i === active" :id="i" @changed="changeActive")
        .right
            .head contacti.ge
            .mes
-               .imga
-                  Chats
                h1
                   div
                       img(src="/icon/girl.png")
                       span niako
                           i 22 წლის
                   img(src="/icon/block.png")
+               .content
+                   Chats
            .sends
                textarea
                img(src="/icon/send.png")
@@ -32,6 +32,16 @@ export default {
     components: {
         ActiveUser,
         Chats
+    },
+    data() {
+        return {
+            active: null
+        }
+    },
+    methods: {
+        changeActive(id) {
+            this.active = id
+        }
     }
 }
 </script>
@@ -149,6 +159,10 @@ export default {
                     & > img {
                         width: 30px;
                     }
+                }
+                .content {
+                    position: relative;
+                    height: calc(100% - 52px);
                 }
             }
             .sends {

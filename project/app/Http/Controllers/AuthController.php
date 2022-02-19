@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
+//use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -12,21 +12,19 @@ class AuthController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8',
+            'age' => 'required|integer',
         ]);
 
         $user = User::create([
             'name' => $validatedData['name'],
-            'email' => $validatedData['email'],
-            'password' => Hash::make($validatedData['password']),
+            'age' => $validatedData['age']
         ]);
 
         $token = $user->createToken('auth_token')->plainTextToken;
 
         return response()->json([
             'access_token' => $token,
-            'token_type' => 'Bearer',
+            'token_type' => 'kai',
         ]);
     }
 }

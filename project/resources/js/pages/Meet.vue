@@ -12,7 +12,7 @@
                img.active(src="/icon/currier.png")
        .form
            h1 მონაცემები
-           input(type="text" placeholder="სახელი")
+           input(type="text" placeholder="სახელი" v-model="data.name" )
            .checks
                label.check.boy(:class="{'checked': checked === 1}" @click="checked=1")
                     input(type="radio" name="gender")
@@ -20,9 +20,9 @@
                label.check.girl(:class="{'checked': checked === 2}" @click="checked=2")
                     input(type="radio" name="gender")
                     span გოგო
-           select
+           select(v-model="data.age")
             option(v-for="age in ages") {{ age }}
-           button(@click="startChat") დაწყება
+           button(@click="start") დაწყება
     img(src="/icon/wave.svg")
 </template>
 
@@ -31,13 +31,27 @@ export default {
     name: "Meet",
     data() {
         return {
-            checked: null
+            checked: null,
+            data: {}
         }
     },
+    mounted() {
+        axios.get('/api/user').then(res => {
+            console.log(res);
+        });
+    },
     methods: {
-        startChat() {
-            this.$router.push({name: "MeetMain"})
-        }
+        // startChat() {
+        //     this.$router.push({name: "MeetMain"})
+        // },
+        start() {
+            this.data.age = parseInt(this.data.age)
+            axios.post('/api/create-user',this.data)
+                .then((res) => {
+                    console.log(res);
+                })
+        },
+
     },
     computed: {
         ages() {

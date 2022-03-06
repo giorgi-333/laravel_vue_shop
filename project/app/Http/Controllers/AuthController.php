@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-//use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -24,7 +23,12 @@ class AuthController extends Controller
 
         return response()->json([
             'access_token' => $token,
-            'token_type' => 'kai',
+            'token_type' => 'Bearer',
         ]);
     }
+    public function me(Request $request)
+    {
+        return $request->user();
+    }
+
 }

@@ -89,7 +89,7 @@ export default {
         }
         .chats {
             height: 100%;
-            overflow: hidden;
+            overflow-y: auto;
             padding: 3px;
         }
     }

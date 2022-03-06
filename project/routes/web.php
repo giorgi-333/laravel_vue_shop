@@ -30,9 +30,9 @@ Route::put('/api/todo',[todo::class, 'update']);
 //Route::get('/api/image', [todo::class, 'index']);
 Route::post('/api/image',[UploadImageContr::class, 'store'] );
 
-// Meet
+// Meet Users
 Route::post('/api/create-user',[AuthController::class, 'register']);
-
+Route::post('/api/me', [AuthController::class, 'me'])->middleware('auth:sanctum');
 
 Route::get('/{vue_capture?}', function () {
     return view('welcome');

@@ -5440,13 +5440,23 @@ __webpack_require__.r(__webpack_exports__);
   name: "Meet",
   data: function data() {
     return {
-      checked: null
+      checked: null,
+      data: {}
     };
   },
+  mounted: function mounted() {
+    axios.get('/api/user').then(function (res) {
+      console.log(res);
+    });
+  },
   methods: {
-    startChat: function startChat() {
-      this.$router.push({
-        name: "MeetMain"
+    // startChat() {
+    //     this.$router.push({name: "MeetMain"})
+    // },
+    start: function start() {
+      this.data.age = parseInt(this.data.age);
+      axios.post('/api/create-user', this.data).then(function (res) {
+        console.log(res);
       });
     }
   },
@@ -29858,7 +29868,26 @@ var render = function () {
       _vm._m(0),
       _c("div", { staticClass: "form" }, [
         _c("h1", [_vm._v("მონაცემები")]),
-        _c("input", { attrs: { type: "text", placeholder: "სახელი" } }),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.data.name,
+              expression: "data.name",
+            },
+          ],
+          attrs: { type: "text", placeholder: "სახელი" },
+          domProps: { value: _vm.data.name },
+          on: {
+            input: function ($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.data, "name", $event.target.value)
+            },
+          },
+        }),
         _c("div", { staticClass: "checks" }, [
           _c(
             "label",
@@ -29895,12 +29924,39 @@ var render = function () {
         ]),
         _c(
           "select",
+          {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.data.age,
+                expression: "data.age",
+              },
+            ],
+            on: {
+              change: function ($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function (o) {
+                    return o.selected
+                  })
+                  .map(function (o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.$set(
+                  _vm.data,
+                  "age",
+                  $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                )
+              },
+            },
+          },
           _vm._l(_vm.ages, function (age) {
             return _c("option", [_vm._v(_vm._s(age))])
           }),
           0
         ),
-        _c("button", { on: { click: _vm.startChat } }, [_vm._v("დაწყება")]),
+        _c("button", { on: { click: _vm.start } }, [_vm._v("დაწყება")]),
       ]),
     ]),
     _c("img", { attrs: { src: "/icon/wave.svg" } }),

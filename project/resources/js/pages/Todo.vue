@@ -20,7 +20,7 @@ export default {
         }
     },
     mounted() {
-        this.fetchAllTodo()
+        // this.fetchAllTodo()
     },
     methods: {
         fetchAllTodo() {

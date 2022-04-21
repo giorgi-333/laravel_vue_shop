@@ -1,7 +1,8 @@
 <template lang="pug">
-.webisite(:class="{'dark': hideHeader}")
-    site-header(v-if="hideHeader")
-    router-view
+v-app
+    site-header
+    .pt-16
+        router-view
 </template>
 
 <script>
@@ -11,11 +12,6 @@ export default {
     name: "Website",
     components: {
         SiteHeader
-    },
-    computed: {
-        hideHeader() {
-            return this.$route.name !== "meet" && this.$route.name !== "MeetMain"
-        }
     }
 }
 </script>
@@ -25,9 +21,5 @@ export default {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-.dark {
-    background-color: #333;
-    color: whitesmoke;
 }
 </style>

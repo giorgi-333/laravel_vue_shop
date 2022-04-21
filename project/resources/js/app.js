@@ -3,9 +3,14 @@ require('./bootstrap');
 // window.Vue = require('vue');
 import Vue from "vue";
 import VueRouter from "vue-router";
+import vuetify from './plugins/vuetify'
+import 'vuetify/dist/vuetify.min.css'
+
 
 // import pages
 import Website from "./pages/Website";
+import Home from "./pages/Home";
+import product from "./pages/product";
 import Todo from "./pages/Todo";
 import ImageUpload from "./pages/ImageUpload";
 import Meet from "./pages/Meet";
@@ -18,6 +23,16 @@ const routes = [
         path: "/",
         component: Website,
         children: [
+            {
+                path: '',
+                name: 'home',
+                component: Home
+            },
+            {
+                path: 'products/:name',
+                name: 'product',
+                component: product
+            },
             {
                 path: 'todo',
                 name: 'todo',
@@ -48,5 +63,6 @@ const router = new VueRouter({
 })
 
 const app = new Vue({
-    router
+    router,
+    vuetify
 }).$mount('#app');

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\todo;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UploadImageContr;
+use App\Http\Controllers\products;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,10 @@ use App\Http\Controllers\UploadImageContr;
 //Route::get('/', function () {
 //    return view('welcome');
 //});
+
+// products
+Route::get('/api/products', [products::class, 'index']);
+Route::post('/api/todo',[products::class, 'store']);
 
 //todo
 Route::get('/api/todo', [todo::class, 'index']);

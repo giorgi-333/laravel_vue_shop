@@ -1,13 +1,24 @@
 <template lang="pug">
-header
-    router-link(:to="{name: 'todo'}") todo
-    router-link(:to="{name: 'imageUpload'}") image upload
-    router-link(:to="{name: 'meet'}") meet
+v-app-bar(elevation="4" fixed)
+    v-tabs(align-with-title)
+        v-tab(:to="{name: 'home'}") Home
+        v-tab(:to="{name: 'todo'}") todo
+        v-tab(:to="{name: 'imageUpload'}") image upload
+        v-tab(:to="{name: 'meet'}") meet
+    v-switch(
+        v-model="$vuetify.theme.dark"
+        color="secondary"
+        hide-details )
 </template>
 
 <script>
 export default {
-    name: "Header"
+    name: "Header",
+    data() {
+        return {
+            dark: true
+        }
+    }
 }
 </script>
 

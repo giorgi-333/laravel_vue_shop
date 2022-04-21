@@ -22,7 +22,7 @@
                     span გოგო
            select(v-model="data.age")
             option(v-for="age in ages") {{ age }}
-           button(@click="start") დაწყება
+           button(@click="startChat") დაწყება
     img(src="/icon/wave.svg")
 </template>
 
@@ -36,14 +36,14 @@ export default {
         }
     },
     mounted() {
-        axios.get('/api/user').then(res => {
-            console.log(res);
-        });
+        // axios.get('/api/user').then(res => {
+        //     console.log(res);
+        // });
     },
     methods: {
-        // startChat() {
-        //     this.$router.push({name: "MeetMain"})
-        // },
+        startChat() {
+            this.$router.push({name: "MeetMain"})
+        },
         start() {
             this.data.age = parseInt(this.data.age)
             axios.post('/api/create-user',this.data)

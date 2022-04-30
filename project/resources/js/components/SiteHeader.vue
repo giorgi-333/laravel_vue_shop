@@ -2,7 +2,7 @@
 v-app-bar(elevation="4" fixed)
     v-tabs(align-with-title)
         v-tab(:to="{name: 'home'}") Home
-        v-tab(:to="{name: 'todo'}") todo
+        v-tab(:to="{name: 'admin'}") todo
         v-tab(:to="{name: 'imageUpload'}") image upload
         v-tab(:to="{name: 'meet'}") meet
     v-switch(

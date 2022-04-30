@@ -15,6 +15,7 @@ import Todo from "./pages/Todo";
 import ImageUpload from "./pages/ImageUpload";
 import Meet from "./pages/Meet";
 import MeetMain from "./pages/MeetMain";
+import Admin from "./pages/Admin";
 
 Vue.use(VueRouter);
 
@@ -29,9 +30,14 @@ const routes = [
                 component: Home
             },
             {
-                path: 'products/:name',
+                path: 'products/:slug',
                 name: 'product',
                 component: product
+            },
+            {
+                path: 'admin',
+                name: 'admin',
+                component: Admin
             },
             {
                 path: 'todo',

@@ -24,7 +24,8 @@ use App\Http\Controllers\products;
 
 // products
 Route::get('/api/products', [products::class, 'index']);
-Route::post('/api/todo',[products::class, 'store']);
+Route::get('/api/products/{slug}',[products::class, 'show']);
+Route::post('/api/products',[products::class, 'store']);
 
 //todo
 Route::get('/api/todo', [todo::class, 'index']);

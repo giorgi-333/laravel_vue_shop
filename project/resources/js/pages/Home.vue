@@ -4,7 +4,8 @@
             class="mx-auto"
             max-width="374"
             v-for="product in products"
-            :to="{ name:'product', params: { name: product.name } }"
+            :key="product.id"
+            :to="{ name:'product', params: { slug: product.slug } }"
         >
             <template slot="progress">
                 <v-progress-linear

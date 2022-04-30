@@ -1209,7 +1209,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
     </column>
     <column id="345" parent="342" name="price">
       <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>float(20,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="346" parent="342" name="descr">
@@ -1226,7 +1226,12 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="349" parent="342" name="PRIMARY">
+    <column id="349" parent="342" name="slug">
+      <Position>7</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="350" parent="342" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

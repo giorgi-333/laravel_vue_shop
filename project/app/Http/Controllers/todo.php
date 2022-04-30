@@ -26,7 +26,6 @@ class todo extends Controller
     public function update(Request $request) {
         $data = $request->all();
 
-
         $item = TodoMig::find($data["id"]);
 
         $item->done = $data["done"];

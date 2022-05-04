@@ -2,31 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Updated Api">
-      <change afterPath="$PROJECT_DIR$/project/public/images/atami.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/images/bali.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/images/london-1081820_1280.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/images/mandarini.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/images/qliavi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/images/vashli.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/resources/js/pages/Admin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca77dd16-288a-475b-a99a-105997eecaf1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca77dd16-288a-475b-a99a-105997eecaf1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/Http/Controllers/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/Http/Controllers/products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/Http/Controllers/todo.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/Http/Controllers/todo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/public/images/Ukraine.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/public/images/boat-5889919_1280.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/public/images/car.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/product.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/product.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/plugins/vuetify.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/plugins/vuetify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/Admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/Admin.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +226,11 @@
       <workItem from="1650960542509" duration="627000" />
       <workItem from="1650977988606" duration="8000" />
       <workItem from="1651250519360" duration="676000" />
-      <workItem from="1651320308145" duration="665000" />
+      <workItem from="1651320308145" duration="2053000" />
+      <workItem from="1651331850305" duration="306000" />
+      <workItem from="1651422338400" duration="35000" />
+      <workItem from="1651424208749" duration="10000" />
+      <workItem from="1651682072754" duration="1758000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Project 2">
       <created>1650572940656</created>
@@ -258,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650572940656</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated Api">
+      <created>1651323143348</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651323143348</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

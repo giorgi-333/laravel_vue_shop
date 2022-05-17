@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Updated Api">
+    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Updated add products">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/Admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/Admin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/app/Http/Controllers/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/Http/Controllers/products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +231,11 @@
       <workItem from="1651331850305" duration="306000" />
       <workItem from="1651422338400" duration="35000" />
       <workItem from="1651424208749" duration="10000" />
-      <workItem from="1651682072754" duration="1758000" />
+      <workItem from="1651682072754" duration="3486000" />
+      <workItem from="1652179834578" duration="568000" />
+      <workItem from="1652255237980" duration="986000" />
+      <workItem from="1652294229084" duration="117000" />
+      <workItem from="1652807977093" duration="3883000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Project 2">
       <created>1650572940656</created>
@@ -246,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651323143348</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Updated add products">
+      <created>1651685171336</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1651685171336</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,6 +279,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Inital Project 2" />
     <MESSAGE value="Updated Api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Api" />
+    <MESSAGE value="Updated add products" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated add products" />
   </component>
 </project>

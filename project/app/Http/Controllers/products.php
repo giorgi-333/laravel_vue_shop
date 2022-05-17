@@ -11,13 +11,24 @@ class products extends Controller
     public function index()
     {
         $products = DB::table('products')->get();
-//        $products["url"] = url();
         $products = json_decode(json_encode($products), true);
 
         for($i = 0; $i < count($products); $i++) {
             $products[$i]["img"] = url("/") . $products[$i]["img"];
             $products[$i]["price"] = number_format($products[$i]["price"],2,'.','');
         }
+        return response()->json($products);
+    }
+    public function rame(Request $request)
+    {
+        $lang = $request->header('Accept-Language');
+
+        $products = DB::table('product')
+            ->join('product_transitions', function ($join) use ($lang) {
+                $join->on('product.id', '=', 'product_transitions.product_id')
+                    ->where('product_transitions.lang_code', '=', $lang);
+            })
+            ->get();
         return response()->json($products);
     }
     public function show($slug)

@@ -27,6 +27,9 @@ Route::get('/api/products', [products::class, 'index']);
 Route::get('/api/products/{slug}',[products::class, 'show']);
 Route::post('/api/products',[products::class, 'store']);
 
+//test
+Route::get('/api/product', [products::class, 'rame']);
+
 //todo
 Route::get('/api/todo', [todo::class, 'index']);
 Route::post('/api/todo',[todo::class, 'store']);

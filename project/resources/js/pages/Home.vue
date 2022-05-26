@@ -1,46 +1,68 @@
 <template>
-    <div class="products pa-10">
-        <v-card
-            class="mx-auto"
-            max-width="374"
-            v-for="product in products"
-            :key="product.id"
-            :to="{ name:'product', params: { slug: product.slug } }"
-        >
-            <template slot="progress">
-                <v-progress-linear
-                    color="deep-purple"
-                    height="10"
-                    indeterminate
-                ></v-progress-linear>
-            </template>
+    <div class="cont pa-2">
+        <lang-changed @langChanged="fetchProducts" />
+        <v-carousel cycle>
+            <v-carousel-item
+                v-for="(img, i) in sliderImgs"
+                :key="i"
+            >
+                <v-img :src="img"/>
+            </v-carousel-item>
+        </v-carousel>
+        <div class="products mt-4">
+            <v-card
+                class="mx-auto"
+                max-width="374"
+                v-for="product in products"
+                :key="product.id"
+                :to="{ name:'product', params: { slug: product.slug } }"
+            >
+                <template slot="progress">
+                    <v-progress-linear
+                        color="deep-purple"
+                        height="10"
+                        indeterminate
+                    ></v-progress-linear>
+                </template>
 
-            <v-img
-                height="250"
-                :src="product.img"
-            ></v-img>
+                <v-img
+                    height="250"
+                    :src="product.img"
+                ></v-img>
 
-            <v-card-title>{{ product.name }}</v-card-title>
+                <v-card-title>{{ product.name }}</v-card-title>
 
-            <v-card-text>
-                <div class="my-4 text-subtitle-1">
-                    {{ product.price }} ₾
-                </div>
+                <v-card-text>
+                    <div class="my-4 text-subtitle-1">
+                        {{ product.price }} ₾
+                    </div>
 
-                <div>
-                    {{ product.descr }}
-                </div>
-            </v-card-text>
-        </v-card>
+                    <div>
+                        {{ product.descr }}
+                    </div>
+                </v-card-text>
+            </v-card>
+        </div>
     </div>
 </template>
 
 <script>
+import { request } from "../app";
+import langChanged from "../components/langChanged";
+
 export default {
     name: "Home",
+    components: {
+        langChanged
+    },
     data() {
         return {
-            products: []
+            products: [],
+            sliderImgs: [
+                '/imgs/slide1.jpg',
+                '/imgs/slide2.jpg',
+                '/imgs/slide3.jpg'
+            ],
         }
     },
     mounted() {
@@ -48,7 +70,7 @@ export default {
     },
     methods: {
         fetchProducts() {
-            axios.get('/api/products')
+            request.get('/api/products')
                 .then((response) => {
                     this.products = response.data
                 })
@@ -58,9 +80,11 @@ export default {
 </script>
 
 <style lang="scss">
-.products {
+.cont {
     max-width: 1400px;
     margin: 0 auto;
+}
+.products {
     display: grid;
     grid-template-columns: repeat(auto-fill, 374px);
     gap: 30px;

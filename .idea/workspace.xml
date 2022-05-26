@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Added vuex">
-      <change afterPath="$PROJECT_DIR$/project/app/Models/products.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/resources/js/routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/resources/js/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/icons/en.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/icons/ka.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/imgs/slide1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/imgs/slide2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/public/imgs/slide3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/resources/js/components/langChanged.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/resources/js/plugins/translate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/Http/Controllers/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/Http/Controllers/products.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,12 +164,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/project/resources/js/assets/icons" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2021.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="PHP Script.Laravel">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\resources\js\assets\icons" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\public\imgs" />
+      <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\public" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.hot">
     <configuration name="Laravel" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/project/artisan" scriptParameters="serve">
       <method v="2" />
     </configuration>
@@ -241,7 +258,10 @@
       <workItem from="1652255237980" duration="986000" />
       <workItem from="1652294229084" duration="117000" />
       <workItem from="1652807977093" duration="6045000" />
-      <workItem from="1652868644464" duration="4805000" />
+      <workItem from="1652868644464" duration="5659000" />
+      <workItem from="1652896652444" duration="2971000" />
+      <workItem from="1653305140568" duration="2127000" />
+      <workItem from="1653546760542" duration="6399000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Project 2">
       <created>1650572940656</created>
@@ -271,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652816602219</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added vuex">
+      <created>1652883342139</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652883342139</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

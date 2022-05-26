@@ -8,8 +8,8 @@ const store = new Vuex.Store({
         lang: "ka"
     },
     mutations: {
-        changeLang (state) {
-            state.lang = state.lang === "ka" ? "en" : "ka"
+        changeLang (state,lang) {
+            state.lang = lang
         }
     }
 })

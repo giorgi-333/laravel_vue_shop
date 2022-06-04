@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AuthController extends Controller
 {
@@ -19,7 +20,7 @@ class AuthController extends Controller
             'age' => $validatedData['age']
         ]);
 
-        $token = $user->createToken('auth_token')->plainTextToken;
+        $token = $user->createToken('auth_token',['server:update'])->plainTextToken;
 
         return response()->json([
             'access_token' => $token,
@@ -28,7 +29,14 @@ class AuthController extends Controller
     }
     public function me(Request $request)
     {
-        return $request->user();
+//        return $request->user();
+        $user = DB::table('personal_access_tokens')->select('name')->where('id',$request->user()->id)->first();
+
+//        personal_access_tokens
+
+        return response()->json([
+            "er" => $user
+        ]);
     }
 
 }

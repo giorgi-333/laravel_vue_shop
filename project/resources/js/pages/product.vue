@@ -1,5 +1,6 @@
 <template>
     <v-container>
+        <lang-changed @langChanged="rame"/>
         <v-row
             class="mb-6"
             no-gutters
@@ -23,8 +24,14 @@
 </template>
 
 <script>
+import langChanged from "../components/langChanged";
+import {request} from "../app";
+
 export default {
     name: "product",
+    components: {
+        langChanged
+    },
     data() {
         return {
             product: {}
@@ -35,10 +42,13 @@ export default {
     },
     methods: {
         getProduct() {
-            axios.get(`/api/products/${this.$route.params.slug}`)
+            request.get(`/api/products/${this.$route.params.slug}`)
                 .then((response) => {
                     this.product = response.data
                 })
+        },
+        rame() {
+            console.log(1)
         }
     }
 }

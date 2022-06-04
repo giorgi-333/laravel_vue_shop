@@ -1,22 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Added vuex">
-      <change afterPath="$PROJECT_DIR$/project/public/icons/en.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/icons/ka.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/imgs/slide1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/imgs/slide2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/public/imgs/slide3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/resources/js/components/langChanged.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/resources/js/plugins/translate.js" afterDir="false" />
+    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Added language change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/Http/Controllers/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/components/langChanged.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/langChanged.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/MeetMain.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/MeetMain.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/product.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/product.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,7 +251,11 @@
       <workItem from="1652868644464" duration="5659000" />
       <workItem from="1652896652444" duration="2971000" />
       <workItem from="1653305140568" duration="2127000" />
-      <workItem from="1653546760542" duration="6399000" />
+      <workItem from="1653546760542" duration="6710000" />
+      <workItem from="1653837902307" duration="3008000" />
+      <workItem from="1653899200381" duration="5748000" />
+      <workItem from="1653939548526" duration="26000" />
+      <workItem from="1654337444666" duration="782000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Project 2">
       <created>1650572940656</created>
@@ -298,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652883342139</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added language change">
+      <created>1653558047346</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1653558047346</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,6 +323,7 @@
     <MESSAGE value="Updated add products" />
     <MESSAGE value="Added test product lang api" />
     <MESSAGE value="Added vuex" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added vuex" />
+    <MESSAGE value="Added language change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added language change" />
   </component>
 </project>

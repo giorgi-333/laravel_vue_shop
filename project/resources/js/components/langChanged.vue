@@ -14,7 +14,6 @@ export default {
     watch: {
         lang(val) {
             request.defaults.headers["Accept-Language"] = val
-
             this.$nextTick(()=> {
                 this.$emit("langChanged")
                 this.$i18n.locale = val

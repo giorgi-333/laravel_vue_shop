@@ -51,22 +51,22 @@ class products extends Controller
         $data = $request->all();
         $name = $data["name"];
 
-        $imageName = $request->file('img')->getClientOriginalName();
-        $imageName = str_replace(' ','-',$imageName);
+//        $imageName = $request->file('img')->getClientOriginalName();
+//        $imageName = str_replace(' ','-',$imageName);
 
-        $readyData = [
-            "name" => $name,
-            "slug" => Str::slug($name),
-            "descr" => $data["descr"],
-            "price" => $data["price"],
-            "count" => $data["count"],
-            "img" => '/images/' . $imageName
-        ];
+//        $readyData = [
+//            "name" => $name,
+//            "slug" => Str::slug($name),
+//            "descr" => $data["descr"],
+//            "price" => $data["price"],
+//            "count" => $data["count"],
+//            "img" => '/images/' . $imageName
+//        ];
 
-        $request->file('img')->move(public_path('images'), $imageName);
+//        $request->file('img')->move(public_path('images'), $imageName);
+//
+//        DB::table('products')->insert($readyData);
 
-        DB::table('products')->insert($readyData);
-
-        return response()->json($readyData);
+        return response()->json($data);
     }
 }

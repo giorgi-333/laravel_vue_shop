@@ -23,7 +23,8 @@ class AuthController extends Controller
             'age' => $validatedData['age']
         ]);
 
-        $token = $user->createToken('auth_token',['admin:full'])->plainTextToken;
+//        $token = $user->createToken('auth_token',['admin:full'])->plainTextToken;
+        $token = $user->createToken('auth_token',['user:normal'])->plainTextToken;
 
         DB::table('users')->where('id',$user->id)->update([
             'token' => $token
@@ -40,8 +41,8 @@ class AuthController extends Controller
 
         if(!$user) {
             return response()->json([
-                "message" => 'Invalid login details '
-            ]);
+                'message' => "Unauthenticated."
+            ], 401);
         }
 
         return response()->json([

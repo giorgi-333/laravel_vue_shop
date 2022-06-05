@@ -41,7 +41,8 @@ Route::post('/api/image',[UploadImageContr::class, 'store'] );
 
 // Meet Users
 Route::post('/api/create-user',[AuthController::class, 'register']);
-Route::post('/api/me', [AuthController::class, 'me'])->middleware('auth:sanctum');
+Route::post('/api/login',[AuthController::class, 'login']);
+Route::post('/api/me', [AuthController::class, 'me'])->middleware(['auth:sanctum','abilities:admin:full']);
 
 Route::get('/{vue_capture?}', function () {
     return view('welcome');

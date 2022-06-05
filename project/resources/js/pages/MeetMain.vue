@@ -46,7 +46,7 @@ export default {
             this.active = id
         },
         myInfo() {
-            const varToken = '3|ofOByouVQSXBdpV61bXawvWDyaM1alhTYEcFu97N'
+            const varToken = '1|KLuevVYsoOV6KLQPRoabUW7ApcFlGJs9eBEitLFg' // admin full
             axios.post('/api/me', {},
                 {
                     headers: {

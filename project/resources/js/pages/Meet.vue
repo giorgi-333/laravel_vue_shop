@@ -13,6 +13,7 @@
        .form
            h1 მონაცემები
            input(type="text" placeholder="სახელი" v-model="data.name" )
+           input(type="text" placeholder="პაროლი" v-model="data.password" )
            .checks
                label.check.boy(:class="{'checked': checked === 1}" @click="checked=1")
                     input(type="radio" name="gender")

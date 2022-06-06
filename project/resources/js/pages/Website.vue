@@ -3,15 +3,18 @@ v-app
     site-header
     .pt-16
         router-view
+    langChanged(main="true")
 </template>
 
 <script>
 import SiteHeader from "../components/SiteHeader";
+import langChanged from "../components/langChanged";
 
 export default {
     name: "Website",
     components: {
-        SiteHeader
+        SiteHeader,
+        langChanged
     }
 }
 </script>

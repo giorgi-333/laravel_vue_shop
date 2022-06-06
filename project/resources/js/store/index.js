@@ -10,9 +10,7 @@ const store = new Vuex.Store({
     },
     actions: {
         checkLogin({commit}) {
-            // const varToken = 'Bearer 1|KLuevVYsoOV6KLQPRoabUW7ApcFlGJs9eBEitLFg' // admin full
             if(!localStorage.user) {
-                console.log("not logged")
                 return
             }
             return axios.post('/api/me', {},
@@ -25,6 +23,13 @@ const store = new Vuex.Store({
             }).catch((res) => {
                 console.log(res)
             })
+        },
+        login({commit,dispatch},data) {
+            axios.post('/api/login',data)
+                .then((res) => {
+                    localStorage.user = res.data.token_type + ' ' + res.data.access_token
+                    dispatch('checkLogin')
+                })
         }
     },
     mutations: {

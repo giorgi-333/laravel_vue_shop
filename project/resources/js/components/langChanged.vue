@@ -6,6 +6,7 @@ import {request} from "../app";
 
 export default {
     name: "langChanged",
+    props: ["main"],
     computed: {
         lang() {
             return this.$store.state.lang
@@ -13,11 +14,16 @@ export default {
     },
     watch: {
         lang(val) {
-            request.defaults.headers["Accept-Language"] = val
-            this.$nextTick(()=> {
-                this.$emit("langChanged")
-                this.$i18n.locale = val
-            })
+
+            this.$i18n.locale = val
+
+            if (this.main) {
+                request.defaults.headers["Accept-Language"] = val
+            } else {
+                this.$nextTick(() => {
+                    this.$emit("langChanged")
+                })
+            }
         }
     }
 }

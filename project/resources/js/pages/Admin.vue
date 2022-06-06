@@ -99,7 +99,7 @@
                         class="mx-auto"
                         max-width="374"
                     >
-                        <v-icon large style="position: absolute; right: 4px; z-index: 9"> mdi-eye</v-icon>
+                        <v-icon large style="position: absolute; right: 4px; z-index: 9">mdi-eye</v-icon>
                         <v-img
                             height="250"
                             :src="product.image"
@@ -160,13 +160,16 @@
                 </v-card-title>
 
                 <v-card-text>
-                    <v-text-field v-model="loginData.name" label="მომხმარებელი" outlined class="mt-4">
+                    <v-text-field v-model="loginData.name" label="მომხმარებელი" outlined class="mt-4"
+                                  @keyup.enter="selectNext">
                     </v-text-field>
                     <v-text-field v-model="loginData.password" label="პაროლი" outlined
                                   hide-details="true"
                                   :append-icon="passwInput ? 'mdi-eye-off' : 'mdi-eye'"
                                   :type="passwInput ? 'password' : 'text' "
                                   @click:append="passwInput = !passwInput"
+                                  @keyup.enter="login"
+                                  ref="pasw"
                     ></v-text-field>
                 </v-card-text>
 
@@ -225,12 +228,12 @@ export default {
                 })
         },
         login() {
-            axios.post('/api/login',this.loginData)
-                .then((res) => {
-                    localStorage.user = res.data.token_type + ' ' + res.data.access_token
-                    this.dialog = false
-                    this.$store.state.isLogged = true
-                })
+            this.$store.dispatch("login", this.loginData).then(()=>{
+                this.loginData = {}
+            })
+        },
+        selectNext() {
+            this.$refs.pasw.focus()
         }
     },
     watch: {
@@ -240,6 +243,9 @@ export default {
             } else {
                 this.product.image = null
             }
+        },
+        '$store.state.isLogged'(val) {
+            this.dialog = !val
         }
     }
 }

@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Added admin login - front - back fix">
+    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Fix admin login and lang changing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/components/langChanged.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/langChanged.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/Admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/Admin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/Website.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/Website.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/store/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +254,10 @@
       <workItem from="1654337444666" duration="5781000" />
       <workItem from="1654405883003" duration="10244000" />
       <workItem from="1654427155885" duration="11223000" />
-      <workItem from="1654510761225" duration="3400000" />
+      <workItem from="1654510761225" duration="4360000" />
+      <workItem from="1654584775132" duration="617000" />
+      <workItem from="1654669261063" duration="713000" />
+      <workItem from="1654714275573" duration="41000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Project 2">
       <created>1650572940656</created>
@@ -325,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654438785637</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fix admin login and lang changing">
+      <created>1654518877587</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1654518877587</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,6 +357,7 @@
     <MESSAGE value="uh" />
     <MESSAGE value="Added login - back" />
     <MESSAGE value="Added admin login - front - back fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added admin login - front - back fix" />
+    <MESSAGE value="Fix admin login and lang changing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix admin login and lang changing" />
   </component>
 </project>

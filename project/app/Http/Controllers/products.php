@@ -5,25 +5,20 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-use App\Models\products as productsModel;
+use App\Models\Product;
+use App\Models\product_transitions as Transitons;
 
 class products extends Controller
 {
-    public function index()
-    {
-//        $products = DB::table('products')->get();
-//        $products = json_decode(json_encode($products), true);
-//
-//        for($i = 0; $i < count($products); $i++) {
-//            $products[$i]["img"] = url("/") . $products[$i]["img"];
-//            $products[$i]["price"] = number_format($products[$i]["price"],2,'.','');
-//        }
-        $products = productsModel::all();
-        return response()->json($products);
-    }
-    public function rame(Request $request)
+    public function index(Request $request)
     {
         $lang = $request->header('Accept-Language');
+
+        if($lang !== "ka" && $lang !== "en") {
+            return response()->json([
+                "error" => "please select language"
+            ],404);
+        }
 
         $products = DB::table('product')
             ->join('product_transitions', function ($join) use ($lang) {
@@ -48,8 +43,8 @@ class products extends Controller
     }
     public function store(Request $request)
     {
-        $data = $request->all();
-        $name = $data["name"];
+        $params = $request->all();
+//        $name = $data["name"];
 
 //        $imageName = $request->file('img')->getClientOriginalName();
 //        $imageName = str_replace(' ','-',$imageName);
@@ -67,6 +62,44 @@ class products extends Controller
 //
 //        DB::table('products')->insert($readyData);
 
-        return response()->json($data);
+//        $transitions
+
+//        return response()->json($data);
+
+        $product = new Product;
+
+        $product->price = 24;
+        $product->img = "/images/bali.jpg";
+        $product->count = 13;
+        $product->slug = "ratam";
+
+        $product->save();
+
+        //  ka
+
+        Transitons::create([
+            'product_id' => $product->id,
+            'name' => "რატა",
+            'descr'	=> "კაი რატა",
+            'lang_code'	=> "ka"
+        ]);
+
+        // en
+
+        Transitons::create([
+            'product_id' => $product->id,
+            'name' => "rata",
+            'descr'	=> "kai rata",
+            'lang_code'	=> "en"
+        ]);
+
+        //  After save
+
+        $data = Product::all();
+
+        return response()->json( [
+            'data' => $data,
+            "id" => $product->id
+        ] );
     }
 }

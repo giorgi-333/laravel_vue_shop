@@ -1,5 +1,6 @@
 import Vuex from "vuex";
 import Vue from "vue";
+import {request} from "../app";
 
 Vue.use(Vuex)
 
@@ -10,9 +11,9 @@ const store = new Vuex.Store({
     },
     actions: {
         checkLogin({commit}) {
-            if(!localStorage.user) {
-                return
-            }
+            // if(!localStorage.user) {
+            //     throw new Error()
+            // }
             return axios.post('/api/me', {},
                 {
                     headers: {
@@ -20,8 +21,9 @@ const store = new Vuex.Store({
                     }
                 }).then((res) => {
                 commit('setLogin')
-            }).catch((res) => {
-                console.log(res)
+                request.defaults.headers["Authorization"] = localStorage.user
+            }).catch(() => {
+                throw new Error()
             })
         },
         login({commit,dispatch},data) {

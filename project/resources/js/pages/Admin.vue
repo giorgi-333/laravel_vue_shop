@@ -13,23 +13,7 @@
                                     label="სახელი"
                                     hide-details="auto"
                                     outlined
-                                    v-model="product.name"
-                                ></v-text-field>
-                            </v-col>
-                            <v-col md="3">
-                                <v-text-field
-                                    label="ფასი"
-                                    hide-details="auto"
-                                    outlined
-                                    v-model="product.price"
-                                ></v-text-field>
-                            </v-col>
-                            <v-col md="4">
-                                <v-text-field
-                                    label="რაოდენობა"
-                                    hide-details="auto"
-                                    outlined
-                                    v-model="product.count"
+                                    v-model="product.ka.name"
                                 ></v-text-field>
                             </v-col>
                         </v-row>
@@ -40,7 +24,7 @@
                                     label="აღწერა"
                                     value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."
                                     no-resize
-                                    v-model="product.descr"
+                                    v-model="product.ka.descr"
                                 ></v-textarea>
                             </v-col>
                         </v-row>
@@ -58,23 +42,7 @@
                                     label="სახელი"
                                     hide-details="auto"
                                     outlined
-                                    v-model="product.name"
-                                ></v-text-field>
-                            </v-col>
-                            <v-col md="3">
-                                <v-text-field
-                                    label="ფასი"
-                                    hide-details="auto"
-                                    outlined
-                                    v-model="product.price"
-                                ></v-text-field>
-                            </v-col>
-                            <v-col md="4">
-                                <v-text-field
-                                    label="რაოდენობა"
-                                    hide-details="auto"
-                                    outlined
-                                    v-model="product.count"
+                                    v-model="product.en.name"
                                 ></v-text-field>
                             </v-col>
                         </v-row>
@@ -85,7 +53,7 @@
                                     label="აღწერა"
                                     value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."
                                     no-resize
-                                    v-model="product.descr"
+                                    v-model="product.en.descr"
                                 ></v-textarea>
                             </v-col>
                         </v-row>
@@ -123,6 +91,24 @@
                         class="mx-auto mt-3 pa-3"
                         max-width="374"
                     >
+                        <v-row>
+                            <v-col md="6">
+                                <v-text-field
+                                    label="ფასი"
+                                    hide-details="auto"
+                                    outlined
+                                    v-model="product.price"
+                                ></v-text-field>
+                            </v-col>
+                            <v-col md="6">
+                                <v-text-field
+                                    label="რაოდენობა"
+                                    hide-details="auto"
+                                    outlined
+                                    v-model="product.count"
+                                ></v-text-field>
+                            </v-col>
+                        </v-row>
                         <v-row>
                             <v-col>
                                 <v-file-input
@@ -189,15 +175,24 @@
 </template>
 
 <script>
+import {request} from "../app";
+
 export default {
     name: "Admin",
     data() {
         return {
             product: {
-                name: null,
+
                 price: null,
                 count: null,
-                descr: null,
+                ka: {
+                    name: null,
+                    descr: null
+                },
+                en: {
+                    name: null,
+                    descr: null
+                },
                 img: null,
                 image: null
             },
@@ -209,19 +204,21 @@ export default {
     mounted() {
         // Check if is logged
         this.$store.dispatch("checkLogin").then(() => {
+        }).catch(()=>{
             this.dialog = true
         })
     },
     methods: {
-        addProduct() {
+        addProduct() { // 0 - ka // 1 - en
             const data = new FormData();
             data.append('name', this.product.name)
             data.append('img', this.product.img)
-            data.append('descr', this.product.descr)
+            data.append('ka[descr]', this.product.ka.descr)
+            data.append('en[descr]', this.product.en.descr)
             data.append('price', this.product.price)
             data.append('count', this.product.count)
-
-            axios.post("/api/products/", data)
+            // parameters['columns[0][data]'] = '';
+            request.post("/api/product/", data)
                 .then((response) => {
                     alert("დაემატა!")
                     console.log(response)

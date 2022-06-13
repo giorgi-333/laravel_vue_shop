@@ -14,10 +14,10 @@ class products extends Controller
     {
         $lang = $request->header('Accept-Language');
 
-        if($lang !== "ka" && $lang !== "en") {
+        if ($lang !== "ka" && $lang !== "en") {
             return response()->json([
                 "error" => "please select language"
-            ],404);
+            ], 404);
         }
 
         $products = DB::table('product')
@@ -29,18 +29,29 @@ class products extends Controller
 
         $products = json_decode(json_encode($products), true);
 
-        for($i = 0; $i < count($products); $i++) {
+        for ($i = 0; $i < count($products); $i++) {
             $products[$i]["img"] = url("/") . $products[$i]["img"];
-            $products[$i]["price"] = number_format($products[$i]["price"],2,'.','');
+            $products[$i]["price"] = number_format($products[$i]["price"], 2, '.', '');
         }
 
         return response()->json($products);
     }
-    public function show($slug)
+
+    public function show(Request $request, $slug)
     {
-        $products = DB::table('products')->where("slug","=",$slug)->first();
-        return response()->json($products);
+//        $product = DB::table('products')->where("slug","=",$slug)->first();
+        $lang = $request->header('Accept-Language');
+
+        $product = DB::table('product')
+            ->join('product_transitions', function ($join) use ($lang, $slug) {
+                $join->on('product.id', '=', 'product_transitions.product_id')
+                    ->where('product_transitions.lang_code', '=', $lang)
+                    ->where('product.slug', '=', $slug);
+            })
+            ->first();
+        return response()->json($product);
     }
+
     public function store(Request $request)
     {
         $params = $request->all();
@@ -80,8 +91,8 @@ class products extends Controller
         Transitons::create([
             'product_id' => $product->id,
             'name' => "რატა",
-            'descr'	=> "კაი რატა",
-            'lang_code'	=> "ka"
+            'descr' => "კაი რატა",
+            'lang_code' => "ka"
         ]);
 
         // en
@@ -89,17 +100,19 @@ class products extends Controller
         Transitons::create([
             'product_id' => $product->id,
             'name' => "rata",
-            'descr'	=> "kai rata",
-            'lang_code'	=> "en"
+            'descr' => "kai rata",
+            'lang_code' => "en"
         ]);
 
         //  After save
 
         $data = Product::all();
 
-        return response()->json( [
+        return response()->json([
             'data' => $data,
-            "id" => $product->id
-        ] );
+            "id" => $product->id,
+            "descr - ka" => $params['ka']["descr"],
+            "descr - en" => $params['en']["descr"]
+        ]);
     }
 }

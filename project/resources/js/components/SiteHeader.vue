@@ -87,7 +87,7 @@ export default {
             this.$store.state.isLogged = false
         },
         setCartLength() {
-            this.cartLength = localStorage.cart ? JSON.parse(localStorage.cart).length : null
+            this.cartLength = localStorage.cart ? Object.keys(JSON.parse(localStorage.cart)).length : null
         }
     },
     watch: {

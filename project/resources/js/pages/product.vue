@@ -150,19 +150,19 @@ export default {
 
             if(localStorage.cart) {
                 cart = JSON.parse(localStorage.cart)
-                cart.push({
+                cart[this.product.slug] = {
                     name: this.product.name,
                     img: this.product.img,
                     price: this.sale.price
-                })
+                }
                 localStorage.cart = JSON.stringify(cart)
             } else {
-                cart = []
-                cart.push({
+                cart = {}
+                cart[this.product.slug] = {
                     name: this.product.name,
                     img: this.product.img,
                     price: this.sale.price
-                })
+                }
                 localStorage.cart = JSON.stringify(cart)
             }
             this.$store.state.changedCart = !this.$store.state.changedCart

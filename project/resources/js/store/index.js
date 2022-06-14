@@ -7,7 +7,8 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
     state: {
         lang: "ka",
-        isLogged: false
+        isLogged: false,
+        changedCart: true
     },
     actions: {
         checkLogin({commit}) {

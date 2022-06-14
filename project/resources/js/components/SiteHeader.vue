@@ -18,6 +18,8 @@
             style="max-width: 152px"
             :menu-props="{dark: true}"
             @change="langChanged"
+            hide-details="true"
+            class="mr-4 ml-2"
         )
             template(v-slot:selection="{ item }")
                 v-img(:src="langImage(item.value)" max-width="20px" max-height="15px" class="mr-1")
@@ -26,12 +28,17 @@
                 v-img(:src="langImage(item.value)" max-width="20px" max-height="15px" class="mr-1")
                 span {{ item.text}}
         // fab
-        v-btn(
-            color="primary"
-            small
-            @click="logOut"
+        v-badge(
+            color="green"
+            :content="cartLength"
+            class="mr-3"
+            :value="cartLength"
         )
-            v-icon(left) mdi-cart
+            v-btn(
+                color="primary"
+                small
+            )
+                v-icon(left) mdi-cart
 
         v-btn(
             tile
@@ -61,8 +68,12 @@ export default {
                     text: 'ქართული'
                 }
             ],
-            activeLang: 'ka'
+            activeLang: 'ka',
+            cartLength: null
         }
+    },
+    mounted() {
+        this.setCartLength()
     },
     methods: {
         langImage(lang) {
@@ -74,6 +85,14 @@ export default {
         logOut() {
             localStorage.removeItem("user");
             this.$store.state.isLogged = false
+        },
+        setCartLength() {
+            this.cartLength = localStorage.cart ? JSON.parse(localStorage.cart).length : null
+        }
+    },
+    watch: {
+        '$store.state.changedCart' () {
+            this.setCartLength()
         }
     }
 }

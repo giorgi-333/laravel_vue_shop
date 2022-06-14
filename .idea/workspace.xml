@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Added product price and kg inputs for sale">
+    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Updated product price and kg inputs for sale">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/resources/js/pages/product.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/product.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/store/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +269,7 @@
       <workItem from="1655112434770" duration="2550000" />
       <workItem from="1655123621678" duration="6064000" />
       <workItem from="1655144516282" duration="4286000" />
-      <workItem from="1655198592031" duration="3681000" />
+      <workItem from="1655198592031" duration="9885000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Project 2">
       <created>1650572940656</created>
@@ -361,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655146365648</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Updated product price and kg inputs for sale">
+      <created>1655206710151</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1655206710151</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,6 +401,7 @@
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="Added products store test working for multi language" />
     <MESSAGE value="Added product price and kg inputs for sale" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added product price and kg inputs for sale" />
+    <MESSAGE value="Updated product price and kg inputs for sale" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated product price and kg inputs for sale" />
   </component>
 </project>

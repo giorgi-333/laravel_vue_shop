@@ -16,9 +16,8 @@
                 <v-container>
                     <v-card-title> {{ product.name }}</v-card-title>
                     <v-divider/>
-                    <v-card-text>ფასი: {{ product.price }}₾</v-card-text>
-                    <v-card-text> {{ product.descr }}</v-card-text>
-                    <v-row justify="start" align="center">
+                    <v-card-title>{{ product.price }}₾</v-card-title>
+                    <v-row justify="start" align="center" class="mt-6">
                         <v-col md="4">
                             <v-text-field
                                 outlined
@@ -38,6 +37,7 @@
                             <v-btn
                                 color="success"
                                 rounded
+                                @click="addToCart"
                             >
                                 <v-icon left>
                                     mdi-cart-outline
@@ -73,6 +73,10 @@
                     </v-row>
                 </v-container>
             </v-col>
+        </v-row>
+        <v-row>
+            <v-card-title>აღწერა</v-card-title>
+            <v-card-text> {{ product.descr }}</v-card-text>
         </v-row>
     </v-container>
 </template>
@@ -139,6 +143,29 @@ export default {
             let numb = Number(val) + 1
             if (numb % 1 > 0) numb = Math.round((numb) * 100) / 100
             return numb
+        },
+        //    Add to cart
+        addToCart() {
+            let cart
+
+            if(localStorage.cart) {
+                cart = JSON.parse(localStorage.cart)
+                cart.push({
+                    name: this.product.name,
+                    img: this.product.img,
+                    price: this.sale.price
+                })
+                localStorage.cart = JSON.stringify(cart)
+            } else {
+                cart = []
+                cart.push({
+                    name: this.product.name,
+                    img: this.product.img,
+                    price: this.sale.price
+                })
+                localStorage.cart = JSON.stringify(cart)
+            }
+            this.$store.state.changedCart = !this.$store.state.changedCart
         }
     }
 }

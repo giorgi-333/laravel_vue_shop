@@ -25,7 +25,16 @@
             template(v-slot:item="{item}")
                 v-img(:src="langImage(item.value)" max-width="20px" max-height="15px" class="mr-1")
                 span {{ item.text}}
-        v-btn(tile
+        // fab
+        v-btn(
+            color="primary"
+            small
+            @click="logOut"
+        )
+            v-icon(left) mdi-cart
+
+        v-btn(
+            tile
             color="primary"
             rounded
             @click="logOut"

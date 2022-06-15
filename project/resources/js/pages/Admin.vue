@@ -182,7 +182,6 @@ export default {
     data() {
         return {
             product: {
-
                 price: null,
                 count: null,
                 ka: {
@@ -211,7 +210,8 @@ export default {
     methods: {
         addProduct() { // 0 - ka // 1 - en
             const data = new FormData();
-            data.append('name', this.product.name)
+            data.append('ka[name]', this.product.ka.name)
+            data.append('en[name]', this.product.en.name)
             data.append('img', this.product.img)
             data.append('ka[descr]', this.product.ka.descr)
             data.append('en[descr]', this.product.en.descr)

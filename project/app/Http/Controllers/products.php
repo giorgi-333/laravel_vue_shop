@@ -55,34 +55,19 @@ class products extends Controller
     public function store(Request $request)
     {
         $params = $request->all();
-//        $name = $data["name"];
-
-//        $imageName = $request->file('img')->getClientOriginalName();
-//        $imageName = str_replace(' ','-',$imageName);
-
-//        $readyData = [
-//            "name" => $name,
-//            "slug" => Str::slug($name),
-//            "descr" => $data["descr"],
-//            "price" => $data["price"],
-//            "count" => $data["count"],
-//            "img" => '/images/' . $imageName
-//        ];
-
-//        $request->file('img')->move(public_path('images'), $imageName);
-//
-//        DB::table('products')->insert($readyData);
-
-//        $transitions
-
-//        return response()->json($data);
+        $name = $params['en']["name"];
 
         $product = new Product;
 
-        $product->price = 24;
-        $product->img = "/images/bali.jpg";
-        $product->count = 13;
-        $product->slug = "ratam";
+        $imageName = $request->file('img')->getClientOriginalName();
+        $imageName = str_replace(' ','-',$imageName);
+
+        $request->file('img')->move(public_path('images'), $imageName);
+
+        $product->price = $params['price'];
+        $product->img = '/images/' . $imageName;
+        $product->count = $params['count'];
+        $product->slug = Str::slug($name);
 
         $product->save();
 
@@ -90,8 +75,8 @@ class products extends Controller
 
         Transitons::create([
             'product_id' => $product->id,
-            'name' => "რატა",
-            'descr' => "კაი რატა",
+            'name' => $params['ka']["name"],
+            'descr' => $params['ka']["descr"],
             'lang_code' => "ka"
         ]);
 
@@ -99,8 +84,8 @@ class products extends Controller
 
         Transitons::create([
             'product_id' => $product->id,
-            'name' => "rata",
-            'descr' => "kai rata",
+            'name' => $params['en']["name"],
+            'descr' => $params['en']["descr"],
             'lang_code' => "en"
         ]);
 
@@ -108,11 +93,11 @@ class products extends Controller
 
         $data = Product::all();
 
+        $data2 = Transitons::all();
+
         return response()->json([
             'data' => $data,
-            "id" => $product->id,
-            "descr - ka" => $params['ka']["descr"],
-            "descr - en" => $params['en']["descr"]
+            'data2' => $data2
         ]);
     }
 }

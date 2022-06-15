@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Add to cart - localstorage">
+    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Updated - Add to cart - localstorage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/product.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/product.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/app/Http/Controllers/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/Http/Controllers/products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/images/Screenshot-2021-12-20-at-22-39-40-კუბი-ჯი-kubi-ge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/images/london-1081820_1280.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/images/mandarini.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/images/parrot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/images/qliavi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/images/sky.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/images/vashli.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/Admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/Admin.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +174,7 @@
       <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.hot">
+  <component name="RunManager" selected="PHP Script.Laravel">
     <configuration name="Laravel" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/project/artisan" scriptParameters="serve">
       <method v="2" />
     </configuration>
@@ -268,7 +275,8 @@
       <workItem from="1655112434770" duration="2550000" />
       <workItem from="1655123621678" duration="6064000" />
       <workItem from="1655144516282" duration="4286000" />
-      <workItem from="1655198592031" duration="11132000" />
+      <workItem from="1655198592031" duration="11776000" />
+      <workItem from="1655275288497" duration="1901000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Project 2">
       <created>1650572940656</created>
@@ -375,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655235147931</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Updated - Add to cart - localstorage">
+      <created>1655236404379</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1655236404379</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,6 +424,7 @@
     <MESSAGE value="Added product price and kg inputs for sale" />
     <MESSAGE value="Updated product price and kg inputs for sale" />
     <MESSAGE value="Add to cart - localstorage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add to cart - localstorage" />
+    <MESSAGE value="Updated - Add to cart - localstorage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated - Add to cart - localstorage" />
   </component>
 </project>

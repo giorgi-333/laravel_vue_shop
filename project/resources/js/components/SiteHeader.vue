@@ -2,10 +2,10 @@
     v-app-bar(elevation="4" fixed)
         v-spacer
         v-tabs(align-with-title)
-            v-tab(:to="{name: 'home'}") {{ $t("home") }}
-            v-tab(:to="{name: 'admin'}") todo
-            v-tab(:to="{name: 'imageUpload'}") image upload
-            v-tab(:to="{name: 'meet'}") meet
+            v-tab(:to="{name: 'home'}" exact) {{ $t("home") }}
+            v-tab(:to="{name: 'admin'}" exact) todo
+            v-tab(:to="{name: 'imageUpload'}" exact) image upload
+            v-tab(:to="{name: 'meet'}" exact) meet
         v-switch(
             v-model="$vuetify.theme.dark"
             color="secondary"

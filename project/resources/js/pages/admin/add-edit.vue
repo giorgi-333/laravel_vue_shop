@@ -175,7 +175,7 @@
 </template>
 
 <script>
-import {request} from "../app";
+import {request} from "../../app";
 
 export default {
     name: "Admin",
@@ -203,7 +203,7 @@ export default {
     mounted() {
         // Check if is logged
         this.$store.dispatch("checkLogin").then(() => {
-        }).catch(()=>{
+        }).catch(() => {
             this.dialog = true
         })
     },
@@ -225,7 +225,7 @@ export default {
                 })
         },
         login() {
-            this.$store.dispatch("login", this.loginData).then(()=>{
+            this.$store.dispatch("login", this.loginData).then(() => {
                 this.loginData = {}
             })
         },

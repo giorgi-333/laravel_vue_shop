@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Updated - Add to cart - localstorage">
+      <change afterPath="$PROJECT_DIR$/project/resources/js/components/admin/orders.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/resources/js/components/admin/products-table.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/resources/js/pages/Admin-Webiste.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/resources/js/pages/admin/admin.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/Http/Controllers/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/Http/Controllers/products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/public/images/Screenshot-2021-12-20-at-22-39-40-კუბი-ჯი-kubi-ge.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/public/images/london-1081820_1280.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/public/images/mandarini.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/public/images/parrot.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/public/images/qliavi.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/public/images/sky.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/public/images/vashli.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/Admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/Admin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/Admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/admin/add-edit.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -159,7 +158,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/project/resources/js/assets/icons" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/project/resources/js/pages/admin" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2021.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -167,9 +166,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\resources\js\pages\admin" />
       <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\resources\js\assets\icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\resources\js\pages\admin" />
       <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\public\imgs" />
       <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\public" />
     </key>
@@ -277,6 +278,8 @@
       <workItem from="1655144516282" duration="4286000" />
       <workItem from="1655198592031" duration="11776000" />
       <workItem from="1655275288497" duration="1901000" />
+      <workItem from="1655468008092" duration="3618000" />
+      <workItem from="1655541967226" duration="5090000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Project 2">
       <created>1650572940656</created>

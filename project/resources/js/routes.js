@@ -1,11 +1,15 @@
 import Website from "./pages/Website";
 import Home from "./pages/Home";
 import product from "./pages/product";
-import Admin from "./pages/Admin";
 import Todo from "./pages/Todo";
 import ImageUpload from "./pages/ImageUpload";
 import Meet from "./pages/Meet";
 import MeetMain from "./pages/MeetMain";
+// admin
+import AdminWebsite from "./pages/Admin-Webiste";
+import admin from "./pages/admin/admin"
+import adminAddEdit from "./pages/admin/add-edit";
+import orders from "./components/admin/orders";
 
 const routes = [
     {
@@ -21,11 +25,6 @@ const routes = [
                 path: 'products/:slug',
                 name: 'product',
                 component: product
-            },
-            {
-                path: 'admin',
-                name: 'admin',
-                component: Admin
             },
             {
                 path: 'todo',
@@ -46,6 +45,32 @@ const routes = [
                 path: 'meet-home',
                 name: 'MeetMain',
                 component: MeetMain
+            }
+        ]
+    },
+    {
+        path: "/admin",
+        component: AdminWebsite,
+        children: [
+            {
+                path: '',
+                name: 'admin',
+                component: admin
+            },
+            {
+                path: 'add',
+                name: 'adminAdd',
+                component: adminAddEdit
+            },
+            {
+                path: 'edit/:slug',
+                name: 'adminEdit',
+                component: adminAddEdit
+            },
+            {
+                path: 'orders',
+                name: 'orders',
+                component: orders
             }
         ]
     }

@@ -3,6 +3,10 @@
         <v-app-bar fixed>
             <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
             <v-toolbar-title>სამართავი პანელი</v-toolbar-title>
+            <v-spacer></v-spacer>
+            <v-btn to="/" exact>
+                საიტზე გადასვლა
+            </v-btn>
         </v-app-bar>
 
         <v-navigation-drawer

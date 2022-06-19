@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Updated - Add to cart - localstorage">
-      <change afterPath="$PROJECT_DIR$/project/resources/js/components/admin/orders.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/resources/js/components/admin/products-table.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/resources/js/pages/Admin-Webiste.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/resources/js/pages/admin/admin.vue" afterDir="false" />
+    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Updated router for admin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/Admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/admin/add-edit.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/components/admin/products-table.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/admin/products-table.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/Admin-Webiste.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/Admin-Webiste.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/admin/add-edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/admin/add-edit.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +27,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.0">
     <include_path>
@@ -279,7 +283,7 @@
       <workItem from="1655198592031" duration="11776000" />
       <workItem from="1655275288497" duration="1901000" />
       <workItem from="1655468008092" duration="3618000" />
-      <workItem from="1655541967226" duration="5090000" />
+      <workItem from="1655541967226" duration="12659000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Project 2">
       <created>1650572940656</created>
@@ -393,7 +397,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655236404379</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Updated router for admin">
+      <created>1655547637966</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1655547637966</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,6 +439,7 @@
     <MESSAGE value="Updated product price and kg inputs for sale" />
     <MESSAGE value="Add to cart - localstorage" />
     <MESSAGE value="Updated - Add to cart - localstorage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated - Add to cart - localstorage" />
+    <MESSAGE value="Updated router for admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated router for admin" />
   </component>
 </project>

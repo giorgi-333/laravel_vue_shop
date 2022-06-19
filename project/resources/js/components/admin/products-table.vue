@@ -1,7 +1,7 @@
 <template>
     <v-data-table
         :headers="headers"
-        :items="desserts"
+        :items="products"
         sort-by="calories"
         class="elevation-1"
     >
@@ -9,12 +9,32 @@
             <v-toolbar
                 flat
             >
-                <v-toolbar-title>პროდუქტები</v-toolbar-title>
+                <v-toolbar-title class="width-140">პროდუქტები</v-toolbar-title>
                 <v-divider
                     class="mx-4"
                     inset
                     vertical
                 ></v-divider>
+                <v-tabs
+                    fixed-tabs
+                >
+                    <v-tabs-slider></v-tabs-slider>
+                    <v-tab
+                        href="#mobile-tabs-5-1"
+                        class="primary--text"
+                        @click="langChange('ka')"
+                    >
+                        <v-img src="/icons/ka.svg" max-width="30px"/>
+                    </v-tab>
+
+                    <v-tab
+                        href="#mobile-tabs-5-2"
+                        class="primary--text"
+                        @click="langChange('en')"
+                    >
+                        <v-img src="/icons/en.svg" max-width="30px"/>
+                    </v-tab>
+                </v-tabs>
                 <v-spacer></v-spacer>
                 <v-dialog
                     v-model="dialog"
@@ -27,7 +47,7 @@
                             class="mb-2"
                             :to="{name: 'adminAdd'}"
                         >
-                            New Item
+                            დამატება
                         </v-btn>
                     </template>
                     <v-card>
@@ -139,8 +159,8 @@
                 mdi-delete
             </v-icon>
         </template>
-        <template v-slot:item.calories="{ item }">
-            {{ item.calories }}
+        <template v-slot:item.img="{ item }">
+            <v-img :src="item.img" width="35px" height="35px"/>
         </template>
         <template v-slot:no-data>
             <v-btn
@@ -154,6 +174,9 @@
 </template>
 
 <script>
+import {request} from "../../app";
+import {bus} from "../../app";
+
 export default {
     name: 'productsTable',
     data: () => ({
@@ -161,16 +184,16 @@ export default {
         dialogDelete: false,
         headers: [
             {
-                text: 'Dessert (100g serving)',
+                text: 'სურათი',
                 align: 'start',
                 sortable: false,
-                value: 'name',
+                value: 'img',
             },
-            {text: 'Calories', value: 'calories'},
-            {text: 'Fat (g)', value: 'fat'},
-            {text: 'Carbs (g)', value: 'carbs'},
-            {text: 'Protein (g)', value: 'protein'},
-            {text: 'Actions', value: 'actions', sortable: false},
+            {text: 'სახელი', sortable: false, value: 'name'},
+            {text: 'აღწერა', value: 'descr', sortable: false},
+            {text: 'ფასი', value: 'price'},
+            {text: 'რაოდენობა', value: 'count'},
+            {text: 'Actions', value: 'actions', sortable: false}
         ],
         desserts: [],
         editedIndex: -1,
@@ -188,6 +211,8 @@ export default {
             carbs: 0,
             protein: 0,
         },
+        products: [],
+        lang: 'ka'
     }),
 
     computed: {
@@ -207,9 +232,16 @@ export default {
 
     created() {
         this.initialize()
+        this.getData()
     },
 
     methods: {
+        getData() {
+            request.get('/api/products', {headers: {'Accept-Language': this.lang}})
+                .then((response) => {
+                    this.products = response.data
+                })
+        },
         initialize() {
             this.desserts = [
                 {
@@ -218,77 +250,16 @@ export default {
                     fat: 6.0,
                     carbs: 24,
                     protein: 4.0,
-                },
-                {
-                    name: 'Ice cream sandwich',
-                    calories: 237,
-                    fat: 9.0,
-                    carbs: 37,
-                    protein: 4.3,
-                },
-                {
-                    name: 'Eclair',
-                    calories: 262,
-                    fat: 16.0,
-                    carbs: 23,
-                    protein: 6.0,
-                },
-                {
-                    name: 'Cupcake',
-                    calories: 305,
-                    fat: 3.7,
-                    carbs: 67,
-                    protein: 4.3,
-                },
-                {
-                    name: 'Gingerbread',
-                    calories: 356,
-                    fat: 16.0,
-                    carbs: 49,
-                    protein: 3.9,
-                },
-                {
-                    name: 'Jelly bean',
-                    calories: 375,
-                    fat: 0.0,
-                    carbs: 94,
-                    protein: 0.0,
-                },
-                {
-                    name: 'Lollipop',
-                    calories: 392,
-                    fat: 0.2,
-                    carbs: 98,
-                    protein: 0,
-                },
-                {
-                    name: 'Honeycomb',
-                    calories: 408,
-                    fat: 3.2,
-                    carbs: 87,
-                    protein: 6.5,
-                },
-                {
-                    name: 'Donut',
-                    calories: 452,
-                    fat: 25.0,
-                    carbs: 51,
-                    protein: 4.9,
-                },
-                {
-                    name: 'KitKat',
-                    calories: 518,
-                    fat: 26.0,
-                    carbs: 65,
-                    protein: 7,
-                },
+                }
             ]
         },
 
         editItem(item) {
-            this.editedIndex = this.desserts.indexOf(item)
-            this.editedItem = Object.assign({}, item)
-            this.dialog = true
+            // this.editedIndex = this.desserts.indexOf(item)
+            // this.editedItem = Object.assign({}, item)
+            // this.dialog = true
+
+            this.$router.push({ name: 'adminEdit', params: { slug: item.slug} })
         },
 
         deleteItem(item) {
@@ -326,10 +297,17 @@ export default {
             }
             this.close()
         },
+
+        langChange(lang) {
+            this.lang = lang
+            this.getData()
+        }
     },
 }
 </script>
 
 <style scoped>
-
+.width-140 {
+    min-width: 140px !important;
+}
 </style>

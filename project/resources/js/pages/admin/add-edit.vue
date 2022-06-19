@@ -1,6 +1,16 @@
 <template>
     <v-container class="pt-6">
-        <v-container v-if="$store.state.isLogged">
+        <v-btn
+            color="indigo"
+            small
+            style="float: right;"
+            class="mb-2"
+            to="/admin"
+            exact
+        >
+            <v-icon>mdi-arrow-left-bold</v-icon>
+        </v-btn>
+        <v-container style="clear: both;" v-if="$store.state.isLogged">
             <v-row>
                 <v-col md="6">
                     <v-card class="px-4">
@@ -176,6 +186,7 @@
 
 <script>
 import {request} from "../../app";
+import {bus} from "../../app";
 
 export default {
     name: "Admin",
@@ -206,6 +217,10 @@ export default {
         }).catch(() => {
             this.dialog = true
         })
+
+        if(this.$route.params.slug) {
+            this.getProduct()
+        }
     },
     methods: {
         addProduct() { // 0 - ka // 1 - en
@@ -231,7 +246,14 @@ export default {
         },
         selectNext() {
             this.$refs.pasw.focus()
-        }
+        },
+        getProduct() {
+            request.get(`/api/products/${this.$route.params.slug}`)
+                .then((response) => {
+                    // this.product = response.data
+                    console.log(response.data);
+                })
+        },
     },
     watch: {
         'product.img'(val) {

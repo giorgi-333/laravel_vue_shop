@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Updated router for admin">
+    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Added admin products list">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/components/admin/products-table.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/admin/products-table.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/Admin-Webiste.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/Admin-Webiste.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/app/Http/Controllers/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/Http/Controllers/products.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/resources/js/pages/admin/add-edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/admin/add-edit.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,7 +282,7 @@
       <workItem from="1655198592031" duration="11776000" />
       <workItem from="1655275288497" duration="1901000" />
       <workItem from="1655468008092" duration="3618000" />
-      <workItem from="1655541967226" duration="12659000" />
+      <workItem from="1655541967226" duration="17789000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Project 2">
       <created>1650572940656</created>
@@ -404,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655547637966</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Added admin products list">
+      <created>1655619468488</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1655619468488</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,6 +446,7 @@
     <MESSAGE value="Add to cart - localstorage" />
     <MESSAGE value="Updated - Add to cart - localstorage" />
     <MESSAGE value="Updated router for admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated router for admin" />
+    <MESSAGE value="Added admin products list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added admin products list" />
   </component>
 </project>

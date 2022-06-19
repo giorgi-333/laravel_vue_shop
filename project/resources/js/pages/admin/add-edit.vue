@@ -186,7 +186,6 @@
 
 <script>
 import {request} from "../../app";
-import {bus} from "../../app";
 
 export default {
     name: "Admin",
@@ -248,18 +247,19 @@ export default {
             this.$refs.pasw.focus()
         },
         getProduct() {
-            request.get(`/api/products/${this.$route.params.slug}`)
+            request.get(`/api/admin/products/${this.$route.params.slug}`)
                 .then((response) => {
-                    // this.product = response.data
-                    console.log(response.data);
+                    this.product = response.data
                 })
         },
     },
     watch: {
         'product.img'(val) {
-            if (val) {
+            if (val.name) {
                 this.product.image = URL.createObjectURL(val)
-            } else {
+            }
+            else if(val) {}
+            else {
                 this.product.image = null
             }
         },

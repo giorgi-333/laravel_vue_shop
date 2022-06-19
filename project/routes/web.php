@@ -25,8 +25,10 @@ use App\Http\Controllers\products;
 // products
 Route::get('/api/products', [products::class, 'index']);
 Route::get('/api/products/{slug}',[products::class, 'show']);
-Route::post('/api/product',[products::class, 'store'])->middleware(['auth:sanctum','abilities:admin:full']);
 
+// admin
+Route::post('/api/product',[products::class, 'store'])->middleware(['auth:sanctum','abilities:admin:full']);
+Route::get('/api/admin/products/{slug}', [products::class, 'adminProduct']);
 
 //todo
 Route::get('/api/todo', [todo::class, 'index']);

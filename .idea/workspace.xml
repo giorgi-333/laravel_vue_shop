@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Added admin products list">
+    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Added admin product info">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/app/Http/Controllers/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/Http/Controllers/products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/components/admin/products-table.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/admin/products-table.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/components/langChanged.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/langChanged.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/resources/js/pages/admin/add-edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/admin/add-edit.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/plugins/translate.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/plugins/translate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +182,7 @@
       <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\public" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.Laravel">
+  <component name="RunManager" selected="npm.hot">
     <configuration name="Laravel" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/project/artisan" scriptParameters="serve">
       <method v="2" />
     </configuration>
@@ -282,7 +286,8 @@
       <workItem from="1655198592031" duration="11776000" />
       <workItem from="1655275288497" duration="1901000" />
       <workItem from="1655468008092" duration="3618000" />
-      <workItem from="1655541967226" duration="17789000" />
+      <workItem from="1655541967226" duration="30292000" />
+      <workItem from="1655709030325" duration="1096000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Project 2">
       <created>1650572940656</created>
@@ -410,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655619468488</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added admin product info">
+      <created>1655624803737</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1655624803737</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,6 +459,7 @@
     <MESSAGE value="Updated - Add to cart - localstorage" />
     <MESSAGE value="Updated router for admin" />
     <MESSAGE value="Added admin products list" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added admin products list" />
+    <MESSAGE value="Added admin product info" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added admin product info" />
   </component>
 </project>

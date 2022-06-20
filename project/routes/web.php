@@ -28,7 +28,8 @@ Route::get('/api/products/{slug}',[products::class, 'show']);
 
 // admin
 Route::post('/api/product',[products::class, 'store'])->middleware(['auth:sanctum','abilities:admin:full']);
-Route::get('/api/admin/products/{slug}', [products::class, 'adminProduct']);
+Route::get('/api/admin/products/{slug}', [products::class, 'adminProduct'])->middleware(['auth:sanctum','abilities:admin:full']);
+Route::delete('/api/admin/products/{slug}', [products::class, 'delete'])->middleware(['auth:sanctum','abilities:admin:full']);
 
 //todo
 Route::get('/api/todo', [todo::class, 'index']);

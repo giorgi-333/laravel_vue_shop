@@ -1,306 +1,181 @@
 <template>
-    <v-data-table
-        :headers="headers"
-        :items="products"
-        sort-by="calories"
-        class="elevation-1"
-    >
-        <template v-slot:top>
-            <v-toolbar
-                flat
-            >
-                <v-toolbar-title class="width-140">პროდუქტები</v-toolbar-title>
-                <v-divider
-                    class="mx-4"
-                    inset
-                    vertical
-                ></v-divider>
-                <v-tabs
-                    fixed-tabs
+    <v-container>
+        <lang-changed :main="true"/>
+        <v-data-table
+            :headers="headers"
+            :items="products"
+            sort-by="calories"
+            class="elevation-1"
+        >
+            <template v-slot:top>
+                <v-toolbar
+                    flat
                 >
-                    <v-tabs-slider></v-tabs-slider>
-                    <v-tab
-                        href="#mobile-tabs-5-1"
-                        class="primary--text"
-                        @click="langChange('ka')"
+                    <v-toolbar-title class="width-140"> {{ $t('products') }}</v-toolbar-title>
+                    <v-divider
+                        class="mx-4"
+                        inset
+                        vertical
+                    ></v-divider>
+                    <v-tabs
+                        fixed-tabs
+                        v-model="selectedLang"
                     >
-                        <v-img src="/icons/ka.svg" max-width="30px"/>
-                    </v-tab>
-
-                    <v-tab
-                        href="#mobile-tabs-5-2"
-                        class="primary--text"
-                        @click="langChange('en')"
-                    >
-                        <v-img src="/icons/en.svg" max-width="30px"/>
-                    </v-tab>
-                </v-tabs>
-                <v-spacer></v-spacer>
-                <v-dialog
-                    v-model="dialog"
-                    max-width="500px"
-                >
-                    <template v-slot:activator="{ on, attrs }">
-                        <v-btn
-                            color="primary"
-                            dark
-                            class="mb-2"
-                            :to="{name: 'adminAdd'}"
+                        <v-tabs-slider></v-tabs-slider>
+                        <v-tab
+                            href="#ka"
+                            class="primary--text"
+                            @click="langChange('ka')"
                         >
-                            დამატება
-                        </v-btn>
-                    </template>
-                    <v-card>
-                        <v-card-title>
-                            <span class="text-h5">{{ formTitle }}</span>
-                        </v-card-title>
+                            <v-img src="/icons/ka.svg" max-width="30px"/>
+                        </v-tab>
 
-                        <v-card-text>
-                            <v-container>
-                                <v-row>
-                                    <v-col
-                                        cols="12"
-                                        sm="6"
-                                        md="4"
-                                    >
-                                        <v-text-field
-                                            v-model="editedItem.name"
-                                            label="Dessert name"
-                                        ></v-text-field>
-                                    </v-col>
-                                    <v-col
-                                        cols="12"
-                                        sm="6"
-                                        md="4"
-                                    >
-                                        <v-text-field
-                                            v-model="editedItem.calories"
-                                            label="Calories"
-                                        ></v-text-field>
-                                    </v-col>
-                                    <v-col
-                                        cols="12"
-                                        sm="6"
-                                        md="4"
-                                    >
-                                        <v-text-field
-                                            v-model="editedItem.fat"
-                                            label="Fat (g)"
-                                        ></v-text-field>
-                                    </v-col>
-                                    <v-col
-                                        cols="12"
-                                        sm="6"
-                                        md="4"
-                                    >
-                                        <v-text-field
-                                            v-model="editedItem.carbs"
-                                            label="Carbs (g)"
-                                        ></v-text-field>
-                                    </v-col>
-                                    <v-col
-                                        cols="12"
-                                        sm="6"
-                                        md="4"
-                                    >
-                                        <v-text-field
-                                            v-model="editedItem.protein"
-                                            label="Protein (g)"
-                                        ></v-text-field>
-                                    </v-col>
-                                </v-row>
-                            </v-container>
-                        </v-card-text>
-
-                        <v-card-actions>
-                            <v-spacer></v-spacer>
-                            <v-btn
-                                color="blue darken-1"
-                                text
-                                @click="close"
-                            >
-                                Cancel
-                            </v-btn>
-                            <v-btn
-                                color="blue darken-1"
-                                text
-                                @click="save"
-                            >
-                                Save
-                            </v-btn>
-                        </v-card-actions>
-                    </v-card>
-                </v-dialog>
-                <v-dialog v-model="dialogDelete" max-width="500px">
-                    <v-card>
-                        <v-card-title class="text-h5">Are you sure you want to delete this item?</v-card-title>
-                        <v-card-actions>
-                            <v-spacer></v-spacer>
-                            <v-btn color="blue darken-1" text @click="closeDelete">Cancel</v-btn>
-                            <v-btn color="blue darken-1" text @click="deleteItemConfirm">OK</v-btn>
-                            <v-spacer></v-spacer>
-                        </v-card-actions>
-                    </v-card>
-                </v-dialog>
-            </v-toolbar>
-        </template>
-        <template v-slot:item.actions="{ item }">
-            <v-icon
-                small
-                class="mr-2"
-                @click="editItem(item)"
-            >
-                mdi-pencil
-            </v-icon>
-            <v-icon
-                small
-                @click="deleteItem(item)"
-            >
-                mdi-delete
-            </v-icon>
-        </template>
-        <template v-slot:item.img="{ item }">
-            <v-img :src="item.img" width="35px" height="35px"/>
-        </template>
-        <template v-slot:no-data>
-            <v-btn
-                color="primary"
-                @click="initialize"
-            >
-                Reset
-            </v-btn>
-        </template>
-    </v-data-table>
+                        <v-tab
+                            href="#en"
+                            class="primary--text"
+                            @click="langChange('en')"
+                        >
+                            <v-img src="/icons/en.svg" max-width="30px"/>
+                        </v-tab>
+                    </v-tabs>
+                    <v-spacer></v-spacer>
+                    <v-btn
+                        color="primary"
+                        dark
+                        class="mb-2"
+                        :to="{name: 'adminAdd'}"
+                    >
+                        {{ $t('add') }}
+                    </v-btn>
+                    <v-dialog v-model="dialogDelete" max-width="500px">
+                        <v-card>
+                            <v-card-title class="text-h5">ნამდვილად გსურთ წაშლა?</v-card-title>
+                            <v-card-actions>
+                                <v-spacer></v-spacer>
+                                <v-btn color="blue darken-1" text @click="closeDelete">არა</v-btn>
+                                <v-btn color="blue darken-1" text @click="deleteItemConfirm">კი</v-btn>
+                                <v-spacer></v-spacer>
+                            </v-card-actions>
+                        </v-card>
+                    </v-dialog>
+                </v-toolbar>
+            </template>
+            <template v-slot:item.actions="{ item }">
+                <v-icon
+                    small
+                    class="mr-2"
+                    @click="editItem(item)"
+                >
+                    mdi-pencil
+                </v-icon>
+                <v-icon
+                    small
+                    @click="deleteItem(item)"
+                >
+                    mdi-delete
+                </v-icon>
+            </template>
+            <template v-slot:item.img="{ item }">
+                <v-img :src="item.img" width="35px" height="35px"/>
+            </template>
+            <template v-slot:no-data>
+                <v-btn
+                    color="primary"
+                    @click="getData"
+                >
+                    Reset
+                </v-btn>
+            </template>
+        </v-data-table>
+    </v-container>
 </template>
 
 <script>
 import {request} from "../../app";
-import {bus} from "../../app";
+import LangChanged from "../langChanged";
 
 export default {
     name: 'productsTable',
+    components: {LangChanged},
     data: () => ({
-        dialog: false,
         dialogDelete: false,
-        headers: [
-            {
-                text: 'სურათი',
-                align: 'start',
-                sortable: false,
-                value: 'img',
-            },
-            {text: 'სახელი', sortable: false, value: 'name'},
-            {text: 'აღწერა', value: 'descr', sortable: false},
-            {text: 'ფასი', value: 'price'},
-            {text: 'რაოდენობა', value: 'count'},
-            {text: 'Actions', value: 'actions', sortable: false}
-        ],
         desserts: [],
-        editedIndex: -1,
-        editedItem: {
-            name: '',
-            calories: 0,
-            fat: 0,
-            carbs: 0,
-            protein: 0,
-        },
-        defaultItem: {
-            name: '',
-            calories: 0,
-            fat: 0,
-            carbs: 0,
-            protein: 0,
-        },
+        editedItem: {},
         products: [],
-        lang: 'ka'
+        selectedLang: null
     }),
 
     computed: {
         formTitle() {
-            return this.editedIndex === -1 ? 'New Item' : 'Edit Item'
+            return 'Edit Item'
         },
+        headers() {
+            return [
+                {
+                    text: this.$t('img'),
+                    align: 'start',
+                    sortable: false,
+                    value: 'img',
+                },
+                {text: this.$t('name'), sortable: false, value: 'name'},
+                {text: this.$t('descr'), value: 'descr', sortable: false},
+                {text: this.$t('price'), value: 'price'},
+                {text: this.$t('count'), value: 'count'},
+                {text: 'Actions', value: 'actions', sortable: false}
+            ]
+        }
     },
 
     watch: {
-        dialog(val) {
-            val || this.close()
-        },
         dialogDelete(val) {
             val || this.closeDelete()
         },
     },
 
     created() {
-        this.initialize()
         this.getData()
+        this.selectedLang = this.$store.state.lang
     },
 
     methods: {
         getData() {
-            request.get('/api/products', {headers: {'Accept-Language': this.lang}})
+            request.get('/api/products')
                 .then((response) => {
                     this.products = response.data
                 })
         },
-        initialize() {
-            this.desserts = [
-                {
-                    name: 'Frozen Yogurt',
-                    calories: 159,
-                    fat: 6.0,
-                    carbs: 24,
-                    protein: 4.0,
-                }
-            ]
-        },
 
         editItem(item) {
-            // this.editedIndex = this.desserts.indexOf(item)
-            // this.editedItem = Object.assign({}, item)
-            // this.dialog = true
-
-            this.$router.push({ name: 'adminEdit', params: { slug: item.slug} })
+            this.$router.push({name: 'adminEdit', params: {slug: item.slug}})
         },
 
         deleteItem(item) {
-            this.editedIndex = this.desserts.indexOf(item)
             this.editedItem = Object.assign({}, item)
             this.dialogDelete = true
         },
 
         deleteItemConfirm() {
-            this.desserts.splice(this.editedIndex, 1)
+            request.delete(`/api/admin/products/${this.editedItem.slug}`)
+                .then((response) => {
+                    this.product = response.data
+                    this.getData()
+                })
+            //
             this.closeDelete()
-        },
-
-        close() {
-            this.dialog = false
-            this.$nextTick(() => {
-                this.editedItem = Object.assign({}, this.defaultItem)
-                this.editedIndex = -1
-            })
         },
 
         closeDelete() {
             this.dialogDelete = false
             this.$nextTick(() => {
-                this.editedItem = Object.assign({}, this.defaultItem)
-                this.editedIndex = -1
+                this.editedItem = Object.assign({}, {})
             })
         },
 
-        save() {
-            if (this.editedIndex > -1) {
-                Object.assign(this.desserts[this.editedIndex], this.editedItem)
-            } else {
-                this.desserts.push(this.editedItem)
-            }
-            this.close()
-        },
-
         langChange(lang) {
-            this.lang = lang
-            this.getData()
+            this.$store.state.lang = lang
+            this.$nextTick(() => {
+                this.getData()
+            })
         }
     },
 }

@@ -83,15 +83,15 @@
                             :src="product.image"
                         ></v-img>
 
-                        <v-card-title>{{ product.name }}</v-card-title>
+                        <v-card-title class="pb-0">{{ product.ka.name }}</v-card-title>
 
                         <v-card-text>
-                            <div class="my-4 text-subtitle-1" v-if="product.price">
+                            <div class="my-1 text-subtitle-1" v-if="product.price">
                                 {{ product.price }} ₾
                             </div>
 
                             <div>
-                                {{ product.descr }}
+                                {{ product.ka.descr }}
                             </div>
                         </v-card-text>
                     </v-card>
@@ -191,6 +191,20 @@ export default {
     name: "Admin",
     data() {
         return {
+            defaultProduct: {
+                price: null,
+                count: null,
+                ka: {
+                    name: null,
+                    descr: null
+                },
+                en: {
+                    name: null,
+                    descr: null
+                },
+                img: null,
+                image: null
+            },
             product: {
                 price: null,
                 count: null,
@@ -236,6 +250,7 @@ export default {
                 .then((response) => {
                     alert("დაემატა!")
                     console.log(response)
+                    this.product = {...this.defaultProduct}
                 })
         },
         login() {

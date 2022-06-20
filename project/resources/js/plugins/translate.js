@@ -5,11 +5,25 @@ import store from "../store";
 Vue.use(VueI18n);
 
 const translate = {
-    en: {
-        home: 'Home'
-    },
     ka: {
-        home: 'მთავარი'
+        home: 'მთავარი',
+        name: 'სახელი',
+        descr: 'აღწერა',
+        price: 'ფასი',
+        count: 'რაოდენობა',
+        img: 'სურათი',
+        add: 'დამატება',
+        products: 'პროდუქტები'
+    },
+    en: {
+        home: 'Home',
+        name: 'Name',
+        descr: 'Description',
+        price: 'Price',
+        count: 'Quantity',
+        img: 'Image',
+        add: 'Add',
+        products: 'Products'
     }
 }
 const i18n = new VueI18n({

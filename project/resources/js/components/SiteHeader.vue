@@ -74,6 +74,7 @@ export default {
     },
     mounted() {
         this.setCartLength()
+        this.activeLang = this.$store.state.lang
     },
     methods: {
         langImage(lang) {

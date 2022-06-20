@@ -30,10 +30,10 @@
                     :src="product.img"
                 ></v-img>
 
-                <v-card-title>{{ product.name }}</v-card-title>
+                <v-card-title class="pb-0">{{ product.name }}</v-card-title>
 
                 <v-card-text>
-                    <div class="my-4 text-subtitle-1">
+                    <div class="my-1 text-subtitle-1">
                         {{ product.price }} ₾
                     </div>
 

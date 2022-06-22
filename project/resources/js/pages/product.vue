@@ -28,7 +28,7 @@
                                 class="text-center"
                                 @click:prepend-inner="countDecrement(); countChanged()"
                                 @click:append="sale.count=plusOne(sale.count); countChanged()"
-                                label="კილოგრამი"
+                                :label="$t('kilogram')"
                                 @input="countChanged"
                                 @wheel="countChangeOnWheel"
                             ></v-text-field>
@@ -42,7 +42,7 @@
                                 <v-icon left>
                                     mdi-cart-outline
                                 </v-icon>
-                                დამატება
+                                {{ $t('add') }}
                             </v-btn>
                         </v-col>
                     </v-row>
@@ -53,7 +53,7 @@
                                 hide-details='true'
                                 v-model="sale.price"
                                 class="text-center"
-                                label="თანხა"
+                                :label="$t('price')"
                                 append-icon="₾"
                                 @input="priceChanged"
                                 @wheel="priceChangeOnWheel"
@@ -75,7 +75,7 @@
             </v-col>
         </v-row>
         <v-row>
-            <v-card-title>აღწერა</v-card-title>
+            <v-card-title> {{ $t('descr') }} </v-card-title>
             <v-card-text> {{ product.descr }}</v-card-text>
         </v-row>
     </v-container>

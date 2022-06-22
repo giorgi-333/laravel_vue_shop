@@ -13,7 +13,8 @@ const translate = {
         count: 'რაოდენობა',
         img: 'სურათი',
         add: 'დამატება',
-        products: 'პროდუქტები'
+        products: 'პროდუქტები',
+        kilogram: 'კილოგრამი'
     },
     en: {
         home: 'Home',
@@ -23,7 +24,8 @@ const translate = {
         count: 'Quantity',
         img: 'Image',
         add: 'Add',
-        products: 'Products'
+        products: 'Products',
+        kilogram: 'Kilogram'
     }
 }
 const i18n = new VueI18n({

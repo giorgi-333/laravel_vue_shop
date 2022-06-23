@@ -37,6 +37,7 @@
             v-btn(
                 color="primary"
                 small
+                to="/cart"
             )
                 v-icon(left) mdi-cart
 
@@ -92,7 +93,7 @@ export default {
         }
     },
     watch: {
-        '$store.state.changedCart' () {
+        '$store.state.changedCart'() {
             this.setCartLength()
         }
     }

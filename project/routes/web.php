@@ -6,6 +6,7 @@ use App\Http\Controllers\todo;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UploadImageContr;
 use App\Http\Controllers\products;
+use App\Http\Controllers\cart;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,10 @@ use App\Http\Controllers\products;
 // products
 Route::get('/api/products', [products::class, 'index']);
 Route::get('/api/products/{slug}',[products::class, 'show']);
+
+// cart
+Route::get('/api/cart',[cart::class, 'index']);
+Route::post('/api/cart',[cart::class, 'store'])->middleware('auth:sanctum');
 
 // admin
 Route::post('/api/product',[products::class, 'store'])->middleware(['auth:sanctum','abilities:admin:full']);

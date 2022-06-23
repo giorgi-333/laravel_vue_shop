@@ -75,15 +75,15 @@
             </v-col>
         </v-row>
         <v-row>
-            <v-card-title> {{ $t('descr') }} </v-card-title>
+            <v-card-title> {{ $t('descr') }}</v-card-title>
             <v-card-text> {{ product.descr }}</v-card-text>
         </v-row>
     </v-container>
 </template>
 
 <script>
-import langChanged from "../components/langChanged";
-import {request} from "../app";
+import langChanged from "../../components/langChanged";
+import {request} from "../../app";
 
 export default {
     name: "product",
@@ -146,25 +146,21 @@ export default {
         },
         //    Add to cart
         addToCart() {
-            let cart
 
-            if(localStorage.cart) {
-                cart = JSON.parse(localStorage.cart)
-                cart[this.product.slug] = {
-                    name: this.product.name,
-                    img: this.product.img,
-                    price: this.sale.price
-                }
-                localStorage.cart = JSON.stringify(cart)
-            } else {
-                cart = {}
-                cart[this.product.slug] = {
-                    name: this.product.name,
-                    img: this.product.img,
-                    price: this.sale.price
-                }
-                localStorage.cart = JSON.stringify(cart)
-            }
+            //
+            // cart[this.product.slug] = {
+            //     name: this.product.name,
+            //     img: this.product.img,
+            //     price: this.sale.price
+
+            request.post('/api/cart', {
+                product_id: this.product.id
+            })
+                .then((res) => {
+                    console.log(res)
+                })
+
+
             this.$store.state.changedCart = !this.$store.state.changedCart
         }
     }

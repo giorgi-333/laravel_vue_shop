@@ -15,6 +15,9 @@ export default {
     components: {
         SiteHeader,
         langChanged
+    },
+    mounted() {
+        this.$store.dispatch("checkLogin")
     }
 }
 </script>

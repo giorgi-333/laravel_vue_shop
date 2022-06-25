@@ -1,43 +1,23 @@
 import Vuex from "vuex";
 import Vue from "vue";
-import {request} from "../app";
+//modules
+import frontAuth from "./frontAuth";
+import adminAuth from "./adminAuth";
 
 Vue.use(Vuex)
 
+
 const store = new Vuex.Store({
-    state: {
-        lang: "ka",
-        isLogged: false,
-        changedCart: true
+    modules: {
+        front: frontAuth,
+        admin: adminAuth
     },
-    actions: {
-        checkLogin({commit}) {
-            return axios.post('/api/me', {},
-                {
-                    headers: {
-                        Authorization: localStorage.user
-                    }
-                }).then((res) => {
-                commit('setLogin')
-                request.defaults.headers["Authorization"] = localStorage.user
-            }).catch(() => {
-                throw new Error()
-            })
-        },
-        login({commit,dispatch},data) {
-            axios.post('/api/login',data)
-                .then((res) => {
-                    localStorage.user = res.data.token_type + ' ' + res.data.access_token
-                    dispatch('checkLogin')
-                })
-        }
+    state: {
+        lang: "ka"
     },
     mutations: {
         changeLang(state, lang) {
             state.lang = lang
-        },
-        setLogin(state) {
-            state.isLogged = true
         }
     }
 })

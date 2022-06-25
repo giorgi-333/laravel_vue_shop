@@ -9,7 +9,7 @@
                     </v-card-title>
                 </v-card>
                 <v-list two-line>
-                    <template v-for="(item) in cart">
+                    <template v-for="(item,i) in cart">
                         <v-list-item>
                             <!-- image -->
                             <v-list-item-avatar>
@@ -31,7 +31,7 @@
                                 </v-btn>
                             </v-list-item-action>
                         </v-list-item>
-                        <v-divider inset></v-divider>
+                        <v-divider inset v-if="i !== cart.length - 1"></v-divider>
                     </template>
                 </v-list>
             </v-col>

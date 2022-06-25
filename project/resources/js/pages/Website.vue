@@ -17,7 +17,7 @@ export default {
         langChanged
     },
     created() {
-        this.$store.dispatch("checkLogin")
+        this.$store.dispatch("front/checkLogin")
     }
 }
 </script>

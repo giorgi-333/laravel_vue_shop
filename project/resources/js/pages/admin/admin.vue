@@ -1,6 +1,6 @@
 <template>
     <v-container class="pt-6">
-        <v-container v-if="$store.state.isLogged">
+        <v-container v-if="$store.state.admin.isLogged">
             <products-table />
         </v-container>
         <v-dialog
@@ -60,14 +60,13 @@ export default {
     },
     mounted() {
         // Check if is logged
-        this.$store.dispatch("checkLogin").then(() => {
-        }).catch(() => {
+        this.$store.dispatch("admin/checkLogin").then(() => {}).catch(() => {
             this.dialog = true
         })
     },
     methods: {
         login() {
-            this.$store.dispatch("login", this.loginData).then(() => {
+            this.$store.dispatch("admin/login", this.loginData).then(() => {
                 this.loginData = {}
             })
         },

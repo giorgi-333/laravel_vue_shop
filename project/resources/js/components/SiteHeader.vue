@@ -46,7 +46,7 @@
             color="primary"
             rounded
             @click="logOut"
-            v-if="this.$store.state.isLogged"
+            v-if="$store.state.front.isLogged"
         )
             v-icon(left) mdi-arrow-right-bold-box
             | logOut
@@ -86,7 +86,7 @@ export default {
         },
         logOut() {
             localStorage.removeItem("user");
-            this.$store.state.isLogged = false
+            this.$store.state.front.isLogged = false
         },
         setCartLength() {
             this.cartLength = localStorage.cart ? Object.keys(JSON.parse(localStorage.cart)).length : null

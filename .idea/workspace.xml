@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Added cart controllers in back">
+    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Updated cart">
+      <change afterPath="$PROJECT_DIR$/project/resources/js/store/adminAuth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/resources/js/store/frontAuth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/Http/Controllers/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/Http/Controllers/cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/Models/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/Models/cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/resources/js/pages/Website.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/Website.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/admin/add-edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/admin/add-edit.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/admin/admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/admin/admin.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/resources/js/pages/front/cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/front/cart.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/front/product.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/front/product.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/resources/js/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/store/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/routes/web.php" afterDir="false" />
     </list>
@@ -165,7 +167,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/project/resources/js/pages/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/project/resources/js/store" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2021.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -173,6 +175,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\resources\js\store" />
       <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\resources\js\pages\admin" />
       <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\resources\js\assets\icons" />
     </key>
@@ -183,7 +186,7 @@
       <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\public" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.Laravel">
+  <component name="RunManager" selected="npm.hot">
     <configuration name="Laravel" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/project/artisan" scriptParameters="serve">
       <method v="2" />
     </configuration>
@@ -296,6 +299,9 @@
       <workItem from="1656075858501" duration="6137000" />
       <workItem from="1656091998421" duration="676000" />
       <workItem from="1656096416519" duration="912000" />
+      <workItem from="1656141476138" duration="3281000" />
+      <workItem from="1656144837618" duration="370000" />
+      <workItem from="1656145228300" duration="2102000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Project 2">
       <created>1650572940656</created>
@@ -451,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656014927480</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Updated cart">
+      <created>1656141594563</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1656141594563</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,6 +504,7 @@
     <MESSAGE value="Added admin product info" />
     <MESSAGE value="Fixed translations" />
     <MESSAGE value="Added cart controllers in back" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added cart controllers in back" />
+    <MESSAGE value="Updated cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated cart" />
   </component>
 </project>

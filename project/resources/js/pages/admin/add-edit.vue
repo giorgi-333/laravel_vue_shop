@@ -10,7 +10,7 @@
         >
             <v-icon>mdi-arrow-left-bold</v-icon>
         </v-btn>
-        <v-container style="clear: both;" v-if="$store.state.isLogged">
+        <v-container style="clear: both;" v-if="$store.state.admin.isLogged">
             <v-row>
                 <v-col md="6">
                     <v-card class="px-4">
@@ -226,14 +226,15 @@ export default {
     },
     mounted() {
         // Check if is logged
-        this.$store.dispatch("checkLogin").then(() => {
+        this.$store.dispatch("admin/checkLogin").then(() => {
+            if (this.$route.params.slug) {
+                this.getProduct()
+            }
         }).catch(() => {
             this.dialog = true
         })
 
-        if(this.$route.params.slug) {
-            this.getProduct()
-        }
+
     },
     methods: {
         addProduct() { // 0 - ka // 1 - en
@@ -254,7 +255,7 @@ export default {
                 })
         },
         login() {
-            this.$store.dispatch("login", this.loginData).then(() => {
+            this.$store.dispatch("admin/login", this.loginData).then(() => {
                 this.loginData = {}
             })
         },
@@ -272,9 +273,8 @@ export default {
         'product.img'(val) {
             if (val.name) {
                 this.product.image = URL.createObjectURL(val)
-            }
-            else if(val) {}
-            else {
+            } else if (val) {
+            } else {
                 this.product.image = null
             }
         },

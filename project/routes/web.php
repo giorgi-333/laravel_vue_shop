@@ -31,8 +31,11 @@ Route::get('/api/products/{slug}',[products::class, 'show']);
 Route::get('/api/cart',[cart::class, 'index'])->middleware('auth:sanctum');
 Route::post('/api/cart',[cart::class, 'store'])->middleware('auth:sanctum');
 
-//users
+//users - admin
+Route::post('/api/admin/me', [AuthController::class, 'me'])->middleware(['auth:sanctum','abilities:admin:full']);
 
+//users - front
+Route::post('/api/me', [AuthController::class, 'me'])->middleware(['auth:sanctum','abilities:user:normal']);
 
 // admin
 Route::post('/api/product',[products::class, 'store'])->middleware(['auth:sanctum','abilities:admin:full']);

@@ -147,14 +147,11 @@ export default {
         //    Add to cart
         addToCart() {
 
-            //
-            // cart[this.product.slug] = {
-            //     name: this.product.name,
-            //     img: this.product.img,
-            //     price: this.sale.price
 
             request.post('/api/cart', {
-                product_id: this.product.id
+                product_id: this.product.id,
+                count: this.sale.count,
+                price: this.sale.price
             })
                 .then((res) => {
                     console.log(res)

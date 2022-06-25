@@ -19,7 +19,10 @@
                             <v-list-item-content>
                                 <v-list-item-title v-text="item.name"></v-list-item-title>
 
-                                <v-list-item-subtitle>{{ item.price }}₾</v-list-item-subtitle>
+                                <v-list-item-subtitle> {{ item.cart_count }}კგ - {{
+                                        item.cart_price
+                                    }}₾
+                                </v-list-item-subtitle>
                             </v-list-item-content>
                             <!-- actions -->
                             <v-list-item-action>
@@ -56,6 +59,8 @@
 </template>
 
 <script>
+import {request} from "../../app";
+
 export default {
     name: "cart",
     data() {
@@ -64,9 +69,19 @@ export default {
         }
     },
     mounted() {
-        if (localStorage.cart) {
-            let cart = JSON.parse(localStorage.cart)
-            this.cart = cart
+        this.getCart()
+    },
+    methods: {
+        getCart() {
+            request.get('/api/cart')
+                .then((res) => {
+                    this.cart = res.data
+                })
+        }
+    },
+    watch: {
+        '$store.state.isLogged'() {
+            this.getCart()
         }
     }
 }

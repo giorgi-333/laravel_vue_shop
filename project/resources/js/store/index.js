@@ -12,9 +12,6 @@ const store = new Vuex.Store({
     },
     actions: {
         checkLogin({commit}) {
-            // if(!localStorage.user) {
-            //     throw new Error()
-            // }
             return axios.post('/api/me', {},
                 {
                     headers: {

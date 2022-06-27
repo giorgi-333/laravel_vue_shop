@@ -34,7 +34,14 @@ class cart extends Controller
             $product[$i]["cart_price"] = number_format($cart[$i]["price"], 2, '.', '');
         }
 
-        return response()->json($product);
+        $sum = DB::table("cart")->get()->sum("price");
+
+
+        return response()->json([
+            'list' => $product,
+            'sum' => $sum,
+            'all' => count($product)
+        ]);
     }
 
     public function store(Request $request)

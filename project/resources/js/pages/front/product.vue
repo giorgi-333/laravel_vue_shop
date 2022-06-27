@@ -147,18 +147,20 @@ export default {
         //    Add to cart
         addToCart() {
 
-
             request.post('/api/cart', {
                 product_id: this.product.id,
                 count: this.sale.count,
                 price: this.sale.price
             })
                 .then((res) => {
-                    console.log(res)
+                    this.getCart()
                 })
-
-
-            this.$store.state.changedCart = !this.$store.state.changedCart
+        },
+        getCart() {
+            request.get('/api/cart')
+                .then((res) => {
+                    this.$store.state.front.cartCount = res.data.all
+                })
         }
     }
 }

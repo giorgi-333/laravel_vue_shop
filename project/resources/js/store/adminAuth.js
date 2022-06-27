@@ -4,8 +4,7 @@ import {request} from "../app";
 export const adminAuth = {
     namespaced: true,
     state: {
-        isLogged: false,
-        changedCart: true
+        isLogged: false
     },
     actions: {
         checkLogin({commit}) {

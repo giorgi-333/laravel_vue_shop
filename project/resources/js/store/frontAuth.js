@@ -5,7 +5,7 @@ export const frontAuth = {
     namespaced: true,
     state: {
         isLogged: false,
-        changedCart: true
+        cartCount: null
     },
     actions: {
         checkLogin({commit}) {

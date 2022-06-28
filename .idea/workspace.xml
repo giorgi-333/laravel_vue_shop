@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Updated store">
+    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Updated cart">
+      <change afterPath="$PROJECT_DIR$/project/resources/js/components/front/footer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/resources/js/components/front/order-time-line.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/resources/js/pages/front/products.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/Http/Controllers/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/Http/Controllers/cart.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/resources/js/pages/Website.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/Website.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/front/cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/front/cart.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/resources/js/pages/front/product.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/front/product.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/store/adminAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/store/adminAuth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/store/frontAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/store/frontAuth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/plugins/translate.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/plugins/translate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +186,7 @@
       <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\public" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.Laravel">
+  <component name="RunManager" selected="npm.hot">
     <configuration name="Laravel" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/project/artisan" scriptParameters="serve">
       <method v="2" />
     </configuration>
@@ -301,6 +303,7 @@
       <workItem from="1656144837618" duration="370000" />
       <workItem from="1656145228300" duration="8088000" />
       <workItem from="1656349488359" duration="1109000" />
+      <workItem from="1656442542678" duration="2408000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Project 2">
       <created>1650572940656</created>

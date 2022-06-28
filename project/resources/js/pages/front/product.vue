@@ -8,7 +8,7 @@
             <v-col
                 md="6"
             >
-                <v-img :src="product.img"></v-img>
+                <v-img :src="product.img" max-width="600px" class="mx-auto"></v-img>
             </v-col>
             <v-col
                 md="6"

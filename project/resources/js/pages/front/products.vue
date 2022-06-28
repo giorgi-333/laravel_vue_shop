@@ -1,17 +1,5 @@
 <template>
-    <div class="cont pa-2">
-        <lang-changed @langChanged="fetchProducts"/>
-        <v-carousel cycle>
-            <v-carousel-item
-                v-for="(img, i) in sliderImgs"
-                :key="i"
-            >
-                <v-img :src="img"/>
-            </v-carousel-item>
-        </v-carousel>
-        <v-card-title class="mt-4 justify-center">შეუკვეთე მარტივად</v-card-title>
-        <order-time-line/>
-        <v-card-title class="mt-8 justify-center">ახალი დამატებული პროდუქტები</v-card-title>
+    <div class="cont">
         <div class="products mt-4">
             <v-card
                 class="mx-auto"
@@ -50,23 +38,13 @@
 </template>
 
 <script>
-import {request} from "../app";
-import langChanged from "../components/langChanged";
-import orderTimeLine from "../components/front/order-time-line"
+import {request} from "../../app";
 
 export default {
-    name: "Home",
-    components: {
-        langChanged,
-        orderTimeLine
-    },
+    name: "products",
     data() {
         return {
-            products: [],
-            sliderImgs: [
-                '/imgs/slide2.jpg',
-                '/imgs/slide3.jpg'
-            ],
+            products: []
         }
     },
     mounted() {
@@ -77,15 +55,13 @@ export default {
             request.get('/api/products')
                 .then((response) => {
                     this.products = response.data
-                    if (this.products.length > 6)
-                        this.products.length = 6
                 })
         },
     }
 }
 </script>
 
-<style lang="scss">
+<style scoped>
 .cont {
     max-width: 1400px;
     margin: 0 auto;
@@ -98,5 +74,3 @@ export default {
     justify-content: space-around;
 }
 </style>
-
-

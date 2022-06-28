@@ -12,6 +12,7 @@ import AdminWebsite from "./pages/Admin-Webiste";
 import admin from "./pages/admin/admin"
 import adminAddEdit from "./pages/admin/add-edit";
 import orders from "./components/admin/orders";
+import products from "./pages/front/products";
 
 const routes = [
     {
@@ -22,6 +23,11 @@ const routes = [
                 path: '',
                 name: 'home',
                 component: Home
+            },
+            {
+                path: 'products',
+                name: 'products',
+                component: products
             },
             {
                 path: 'products/:slug',

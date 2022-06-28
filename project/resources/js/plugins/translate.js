@@ -14,7 +14,8 @@ const translate = {
         img: 'სურათი',
         add: 'დამატება',
         products: 'პროდუქტები',
-        kilogram: 'კილოგრამი'
+        kilogram: 'კილოგრამი',
+        follow_us: 'გამოგვყევით სოციალურ ქსელებეში'
     },
     en: {
         home: 'Home',
@@ -25,7 +26,8 @@ const translate = {
         img: 'Image',
         add: 'Add',
         products: 'Products',
-        kilogram: 'Kilogram'
+        kilogram: 'Kilogram',
+        follow_us: 'Follow us on social media'
     }
 }
 const i18n = new VueI18n({

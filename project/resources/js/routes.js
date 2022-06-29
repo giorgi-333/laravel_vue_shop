@@ -4,6 +4,8 @@ import Website from "./pages/Website";
 import Home from "./pages/Home";
 import product from "./pages/front/product";
 import cart from './pages/front/cart'
+import about from "./components/front/about";
+
 // admin
 import AdminWebsite from "./pages/Admin-Webiste";
 import admin from "./pages/admin/admin"
@@ -35,6 +37,11 @@ const routes = [
                 path: 'cart',
                 name: 'cart',
                 component: cart
+            },
+            {
+                path: 'about',
+                name: 'about',
+                component: about
             }
         ]
     },

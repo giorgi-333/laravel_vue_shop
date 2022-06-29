@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Updated cart">
+    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Removed extra files">
+      <change afterPath="$PROJECT_DIR$/project/resources/js/components/front/about.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/Http/Controllers/UploadImageContr.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/Http/Controllers/todo.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/ImageUpload.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/Meet.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/MeetMain.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/Todo.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/plugins/translate.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/plugins/translate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/resources/js/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +181,7 @@
       <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\public" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.Laravel">
+  <component name="RunManager" selected="npm.hot">
     <configuration name="Laravel" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/project/artisan" scriptParameters="serve">
       <method v="2" />
     </configuration>
@@ -304,7 +299,7 @@
       <workItem from="1656145228300" duration="8088000" />
       <workItem from="1656349488359" duration="1109000" />
       <workItem from="1656442542678" duration="2408000" />
-      <workItem from="1656481452854" duration="316000" />
+      <workItem from="1656481452854" duration="2100000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Project 2">
       <created>1650572940656</created>
@@ -474,7 +469,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656163071646</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Removed extra files">
+      <created>1656481857400</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1656481857400</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,6 +518,7 @@
     <MESSAGE value="Added cart controllers in back" />
     <MESSAGE value="Updated cart" />
     <MESSAGE value="Updated store" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated store" />
+    <MESSAGE value="Removed extra files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed extra files" />
   </component>
 </project>

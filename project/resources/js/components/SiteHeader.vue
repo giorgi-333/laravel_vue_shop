@@ -4,9 +4,7 @@
         v-tabs(align-with-title)
             v-tab(:to="{name: 'home'}" exact) {{ $t("home") }}
             v-tab(:to="{name: 'products'}" exact) {{ $t("products") }}
-            v-tab(:to="{name: 'admin'}" exact) todo
-            v-tab(:to="{name: 'imageUpload'}" exact) image upload
-            v-tab(:to="{name: 'meet'}" exact) meet
+            v-tab(:to="{name: 'admin'}" exact) admin
         v-switch(
             v-model="$vuetify.theme.dark"
             color="secondary"

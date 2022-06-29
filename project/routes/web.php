@@ -43,19 +43,6 @@ Route::get('/api/admin/products/{slug}', [products::class, 'adminProduct'])->mid
 Route::delete('/api/admin/products/{slug}', [products::class, 'delete'])->middleware(['auth:sanctum','abilities:admin:full']);
 Route::post('/api/me', [AuthController::class, 'me'])->middleware(['auth:sanctum','abilities:admin:full']);
 
-//todo
-Route::get('/api/todo', [todo::class, 'index']);
-Route::post('/api/todo',[todo::class, 'store']);
-Route::put('/api/todo',[todo::class, 'update']);
-
-//images
-//Route::get('/api/image', [todo::class, 'index']);
-Route::post('/api/image',[UploadImageContr::class, 'store'] );
-
-// Meet Users
-Route::post('/api/create-user',[AuthController::class, 'register']);
-Route::post('/api/login',[AuthController::class, 'login']);
-//Route::post('/api/me', [AuthController::class, 'me'])->middleware(['auth:sanctum','abilities:admin:full']);
 
 Route::get('/{vue_capture?}', function () {
     return view('welcome');

@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Added">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Added orders">
       <change beforePath="$PROJECT_DIR$/project/app/Http/Controllers/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/Http/Controllers/products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/resources/js/pages/front/cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/front/cart.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/front/products.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/front/products.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,7 +297,7 @@
       <workItem from="1656349488359" duration="1109000" />
       <workItem from="1656442542678" duration="2408000" />
       <workItem from="1656481452854" duration="2100000" />
-      <workItem from="1656527259339" duration="1609000" />
+      <workItem from="1656527259339" duration="1948000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Project 2">
       <created>1650572940656</created>
@@ -485,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656483843363</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Added orders">
+      <created>1656528990689</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1656528990689</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,7 +507,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Inital Project 2" />
     <MESSAGE value="Updated Api" />
     <MESSAGE value="Updated add products" />
     <MESSAGE value="Added test product lang api" />
@@ -529,7 +531,8 @@
     <MESSAGE value="Updated store" />
     <MESSAGE value="Removed extra files" />
     <MESSAGE value="Added about us page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added about us page" />
+    <MESSAGE value="Added orders" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added orders" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

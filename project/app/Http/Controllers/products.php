@@ -129,16 +129,19 @@ class products extends Controller
     public function buy(Request $request) {
         $params = $request->all();
 
+        $list = $params['list'];
+        $info = $params['info'];
+
         $ids = '';
 
         $added_order = orders::create([
             'user_id' => $request->user()->id,
-            'address' => 'misamarti',
-            'number' => 'number',
+            'address' => $info['address'],
+            'number' => $info['number'],
             'confirmed' => false
         ]);
 
-        foreach ($params as $item) {
+        foreach ($list as $item) {
             $ids .=  strval($item['id']) . "-";
 
 

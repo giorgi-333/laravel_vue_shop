@@ -1,5 +1,24 @@
 <template>
     <div class="cont">
+        <lang-changed @langChanged="fetchProducts"/>
+        <v-parallax
+            dark
+            src="https://images.unsplash.com/photo-1620278596990-fdf04885f5b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+        >
+            <v-row
+                align="center"
+                justify="center"
+            >
+                <v-col
+                    class="text-center"
+                    cols="12"
+                >
+                    <h1 class="mb-4 orange--text elevation-15">
+                        აირჩიე ჯანსაღი პროდუქტი
+                    </h1>
+                </v-col>
+            </v-row>
+        </v-parallax>
         <div class="products mt-4">
             <v-card
                 class="mx-auto"
@@ -39,9 +58,13 @@
 
 <script>
 import {request} from "../../app";
+import langChanged from "../../components/langChanged";
 
 export default {
     name: "products",
+    components: {
+        langChanged
+    },
     data() {
         return {
             products: []
@@ -72,5 +95,9 @@ export default {
     grid-template-columns: repeat(auto-fill, 374px);
     gap: 30px;
     justify-content: space-around;
+}
+
+.orange--text {
+    text-shadow: 2px 2px 8px #0f05df;
 }
 </style>

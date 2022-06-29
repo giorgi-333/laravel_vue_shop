@@ -109,7 +109,7 @@
                                         <v-btn
                                             color="blue darken-1"
                                             text
-                                            @click="dialog = false"
+                                            @click="buy"
                                         >
                                             დადასტურება
                                         </v-btn>
@@ -150,6 +150,13 @@ export default {
                 .then((res) => {
                     this.cart = res.data
                     this.$store.state.front.cartCount = res.data.all
+                })
+        },
+        buy() {
+            request.post('/api/products/buy',this.cart.list)
+                .then((res) => {
+                    console.log(res);
+                    this.dialog = false
                 })
         }
     },

@@ -26,6 +26,8 @@ use App\Http\Controllers\cart;
 // products
 Route::get('/api/products', [products::class, 'index']);
 Route::get('/api/products/{slug}',[products::class, 'show']);
+Route::post('/api/products/buy', [products::class, 'buy'])->middleware(['auth:sanctum','abilities:user:normal']);
+
 
 // cart
 Route::get('/api/cart',[cart::class, 'index'])->middleware('auth:sanctum');

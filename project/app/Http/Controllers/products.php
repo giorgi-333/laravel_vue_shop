@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use App\Models\Product;
 use App\Models\product_transitions as Transitons;
+//
+use App\Models\orders;
+use App\Models\orders_info;
 
 class products extends Controller
 {
@@ -24,7 +27,7 @@ class products extends Controller
             ->join('product_transitions', function ($join) use ($lang) {
                 $join->on('product.id', '=', 'product_transitions.product_id')
                     ->where('product_transitions.lang_code', '=', $lang);
-            })
+            })->orderByDesc('product.created_at')
             ->get();
 
         $products = json_decode(json_encode($products), true);
@@ -120,6 +123,43 @@ class products extends Controller
 
         return response()->json([
             'info' => 'success'
+        ]);
+    }
+
+    public function buy(Request $request) {
+        $params = $request->all();
+
+        $ids = '';
+
+        $added_order = orders::create([
+            'user_id' => $request->user()->id,
+            'address' => 'misamarti',
+            'number' => 'number',
+            'confirmed' => false
+        ]);
+
+        foreach ($params as $item) {
+            $ids .=  strval($item['id']) . "-";
+
+
+            orders_info::create([
+                'product_id' => $item['id'],
+                'order_id' => $added_order->id,
+                'price' => $item['cart_price']
+            ]);
+
+        }
+
+        $orders_info = orders_info::all();
+
+        $orders = orders::all();
+
+
+        return response()->json([
+            'ids' => $ids,
+            '$orders_info' => $orders_info,
+            '$orders' => $orders,
+            '$added_order' => $added_order
         ]);
     }
 

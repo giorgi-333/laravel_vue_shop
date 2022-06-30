@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Added orders">
+    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Updated orders">
+      <change afterPath="$PROJECT_DIR$/project/resources/js/components/admin/order-dialog.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/Http/Controllers/AuthController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/app/Http/Controllers/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/Http/Controllers/products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/front/cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/front/cart.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/app/Models/orders_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/Models/orders_info.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/components/admin/orders.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/admin/orders.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,7 +302,9 @@
       <workItem from="1656349488359" duration="1109000" />
       <workItem from="1656442542678" duration="2408000" />
       <workItem from="1656481452854" duration="2100000" />
-      <workItem from="1656527259339" duration="1948000" />
+      <workItem from="1656527259339" duration="2288000" />
+      <workItem from="1656582222538" duration="149000" />
+      <workItem from="1656597156686" duration="8617000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Project 2">
       <created>1650572940656</created>
@@ -488,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656528990689</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Updated orders">
+      <created>1656529462644</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1656529462644</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,7 +521,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated Api" />
     <MESSAGE value="Updated add products" />
     <MESSAGE value="Added test product lang api" />
     <MESSAGE value="Added vuex" />
@@ -532,7 +545,8 @@
     <MESSAGE value="Removed extra files" />
     <MESSAGE value="Added about us page" />
     <MESSAGE value="Added orders" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added orders" />
+    <MESSAGE value="Updated orders" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated orders" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

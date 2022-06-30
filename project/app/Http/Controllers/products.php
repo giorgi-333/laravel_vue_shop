@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use App\Models\Product;
 use App\Models\product_transitions as Transitons;
+
 //
 use App\Models\orders;
 use App\Models\orders_info;
@@ -126,7 +127,8 @@ class products extends Controller
         ]);
     }
 
-    public function buy(Request $request) {
+    public function buy(Request $request)
+    {
         $params = $request->all();
 
         $list = $params['list'];
@@ -142,13 +144,13 @@ class products extends Controller
         ]);
 
         foreach ($list as $item) {
-            $ids .=  strval($item['id']) . "-";
-
+            $ids .= strval($item['id']) . "-";
 
             orders_info::create([
                 'product_id' => $item['id'],
                 'order_id' => $added_order->id,
-                'price' => $item['cart_price']
+                'price' => $item['cart_price'],
+                'count' => $item['cart_count']
             ]);
 
         }
@@ -164,6 +166,31 @@ class products extends Controller
             '$orders' => $orders,
             '$added_order' => $added_order
         ]);
+    }
+
+    protected function buy_list(Request $request)
+    {
+
+        $orders = DB::table('orders')
+            ->join('users', 'orders.user_id', '=', 'users.id')
+            ->select('orders.*', 'users.name')
+            ->get();
+
+        return response()->json($orders);
+    }
+
+    protected function buy_info(Request $request)
+    {
+
+        $params = $request->all();
+
+        $info = DB::table('orders_info')
+            ->join('product', 'orders_info.product_id', '=', 'product.id')
+            ->select('orders_info.*', 'product.slug')
+            ->where('orders_info.order_id',$params['id'])
+            ->get();
+
+        return response()->json($info);
     }
 
     public function delete($slug)

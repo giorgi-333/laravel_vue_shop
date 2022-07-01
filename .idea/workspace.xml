@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Updated orders">
-      <change afterPath="$PROJECT_DIR$/project/resources/js/components/admin/order-dialog.vue" afterDir="false" />
+    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Added orders list in admin">
+      <change afterPath="$PROJECT_DIR$/project/resources/js/components/admin/login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/resources/js/components/front/login.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/Http/Controllers/AuthController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/app/Http/Controllers/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/Http/Controllers/products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/app/Models/orders_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/Models/orders_info.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/resources/js/components/admin/orders.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/admin/orders.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/components/meet/ActiveUser.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/components/meet/Chats.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/Website.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/Website.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/admin/admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/admin/admin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/plugins/translate.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/plugins/translate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/store/frontAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/store/frontAuth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -164,7 +170,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/project/resources/js/store" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/project/resources/js/components/front" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2021.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -172,18 +178,20 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\resources\js\components\front" />
       <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\resources\js\store" />
       <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\resources\js\pages\admin" />
       <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\resources\js\assets\icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\resources\js\components\admin" />
       <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\resources\js\pages\front" />
       <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\resources\js\pages\admin" />
       <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\public\imgs" />
       <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\public" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.Laravel">
+  <component name="RunManager" selected="npm.hot">
     <configuration name="Laravel" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/project/artisan" scriptParameters="serve">
       <method v="2" />
     </configuration>
@@ -304,7 +312,8 @@
       <workItem from="1656481452854" duration="2100000" />
       <workItem from="1656527259339" duration="2288000" />
       <workItem from="1656582222538" duration="149000" />
-      <workItem from="1656597156686" duration="8617000" />
+      <workItem from="1656597156686" duration="9866000" />
+      <workItem from="1656658071267" duration="3665000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Project 2">
       <created>1650572940656</created>
@@ -502,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656529462644</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Added orders list in admin">
+      <created>1656614699673</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1656614699673</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +537,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated add products" />
     <MESSAGE value="Added test product lang api" />
     <MESSAGE value="Added vuex" />
     <MESSAGE value="Added language change" />
@@ -546,7 +561,8 @@
     <MESSAGE value="Added about us page" />
     <MESSAGE value="Added orders" />
     <MESSAGE value="Updated orders" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated orders" />
+    <MESSAGE value="Added orders list in admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added orders list in admin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

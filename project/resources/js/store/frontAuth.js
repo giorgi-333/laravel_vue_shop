@@ -9,7 +9,7 @@ export const frontAuth = {
     },
     actions: {
         checkLogin({commit}) {
-            return axios.post('/api/me', {},
+            return axios.post('/api/front/me', {},
                 {
                     headers: {
                         Authorization: localStorage.user
@@ -22,7 +22,7 @@ export const frontAuth = {
             })
         },
         login({commit, dispatch}, data) {
-            axios.post('/api/login', data)
+            return axios.post('/api/login', data)
                 .then((res) => {
                     localStorage.user = res.data.token_type + ' ' + res.data.access_token
                     dispatch('checkLogin')

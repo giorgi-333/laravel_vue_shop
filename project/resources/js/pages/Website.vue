@@ -36,6 +36,11 @@ export default {
                     this.$store.state.front.cartCount = res.data.all
                 })
         }
+    },
+    watch: {
+        '$store.state.front.isLogged'() {
+            this.getCart()
+        }
     }
 }
 </script>

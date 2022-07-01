@@ -161,10 +161,7 @@ class products extends Controller
 
 
         return response()->json([
-            'ids' => $ids,
-            '$orders_info' => $orders_info,
-            '$orders' => $orders,
-            '$added_order' => $added_order
+            'added_order' => $added_order
         ]);
     }
 

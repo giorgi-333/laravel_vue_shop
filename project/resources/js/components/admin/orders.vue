@@ -75,7 +75,7 @@ export default {
     },
 
     created() {
-        this.$store.dispatch("admin/checkLogin").then(() => {
+        this.$store.dispatch("front/checkLogin").then(() => {
             this.getData()
         }).catch(() => {
             this.$router.push({name: 'admin'})

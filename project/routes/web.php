@@ -43,13 +43,14 @@ Route::post('/api/me', [AuthController::class, 'me'])->middleware(['auth:sanctum
 Route::post('/api/product',[products::class, 'store'])->middleware(['auth:sanctum','abilities:admin:full']);
 Route::get('/api/admin/products/{slug}', [products::class, 'adminProduct'])->middleware(['auth:sanctum','abilities:admin:full']);
 Route::delete('/api/admin/products/{slug}', [products::class, 'delete'])->middleware(['auth:sanctum','abilities:admin:full']);
-Route::post('/api/me', [AuthController::class, 'me'])->middleware(['auth:sanctum','abilities:admin:full']);
 Route::get('/api/buy/list', [products::class, 'buy_list'])->middleware(['auth:sanctum','abilities:admin:full']);
 Route::get('/api/buy/info', [products::class, 'buy_info'])->middleware(['auth:sanctum','abilities:admin:full']);
 
 //auth
 Route::post('/api/create-user',[AuthController::class, 'register']);
 Route::post('/api/login',[AuthController::class, 'login']);
+Route::post('/api/me', [AuthController::class, 'me'])->middleware(['auth:sanctum','abilities:admin:full']);
+Route::post('/api/front/me', [AuthController::class, 'me'])->middleware(['auth:sanctum','abilities:user:normal']);
 
 
 Route::get('/{vue_capture?}', function () {

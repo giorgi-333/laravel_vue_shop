@@ -66,16 +66,19 @@
       )
         | {{ $t('register') }}
     login(v-if="showLogin" :showLogin="showLogin" @close="showLogin = false")
+    register(v-if="showRegister" :showRegister="showRegister" @close="showRegister = false")
 
 </template>
 
 <script>
 import login from "./front/login";
+import register from "./front/register";
 
 export default {
   name: "Header",
   components: {
-    login
+    login,
+    register
   },
   data() {
     return {

@@ -6,7 +6,7 @@
     >
         <v-card>
             <v-card-title class="text-h5">
-                {{ $t('login') }}
+                {{ $t('register') }}
             </v-card-title>
 
             <v-card-text>
@@ -18,20 +18,20 @@
                               :append-icon="passwInput ? 'mdi-eye-off' : 'mdi-eye'"
                               :type="passwInput ? 'password' : 'text' "
                               @click:append="passwInput = !passwInput"
-                              @keyup.enter="login"
+                              @keyup.enter="register"
                               ref="pasw"
                 ></v-text-field>
             </v-card-text>
 
-            <v-card-text class="error--text" v-if="isError"> სახელი ან პაროლი არასწორია </v-card-text>
+            <v-card-text class="error--text" v-if="isError"> შეავსეთ მონაცემები</v-card-text>
 
             <v-card-actions class="pb-6">
                 <v-spacer></v-spacer>
                 <v-btn
                     color="primary"
-                    @click="login"
+                    @click="register"
                 >
-                    შესვლა
+                    {{ $t('register') }}
                 </v-btn>
                 <v-spacer></v-spacer>
             </v-card-actions>
@@ -40,26 +40,34 @@
 </template>
 
 <script>
+import {request} from "../../app";
+
 export default {
     name: "login",
     data() {
         return {
-            loginData: {},
+            loginData: {
+                name: '',
+                password: ''
+            },
             passwInput: true,
             show: true,
             isError: false
         }
     },
     methods: {
-        login() {
-            this.$store.dispatch("front/login", this.loginData).then((res) => {
-                this.loginData = {}
-                this.$emit('close')
-                this.isError = false
-            })
-            .catch(()=> {
+        register() {
+            if (this.loginData.name == '' || this.loginData.password == '') {
                 this.isError = true
-            })
+            } else {
+                this.isError = false
+
+                //
+                return request.post('/api/create-user', this.loginData)
+                    .then((res) => {
+                        console.log(res);
+                    })
+            }
         },
         selectNext() {
             this.$refs.pasw.focus()

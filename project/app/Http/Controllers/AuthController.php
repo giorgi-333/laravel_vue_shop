@@ -13,14 +13,12 @@ class AuthController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|string|max:25',
-            'password' => 'required|string|max:30',
-            'age' => 'required|integer',
+            'password' => 'required|string|max:30'
         ]);
 
         $user = User::create([
             'name' => $validatedData['name'],
-            'password' => $validatedData['password'],
-            'age' => $validatedData['age']
+            'password' => $validatedData['password']
         ]);
 
 //        $token = $user->createToken('auth_token',['admin:full'])->plainTextToken;

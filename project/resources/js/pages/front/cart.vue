@@ -91,11 +91,41 @@
                                                     sm="6"
                                                 >
                                                     <v-select
-                                                        :items="['ჩაბარებისას გადახდა']"
+                                                        :items="[{value: 1, text: 'ბარათით გადახდა'},{value: 2, text: 'ჩაბარებისას გადახდა'}]"
+                                                        v-model="pay_type"
                                                         label="გადახდის ტიპი"
                                                         required
                                                     ></v-select>
                                                 </v-col>
+                                                <template v-if="pay_type === 1">
+                                                    <v-col
+                                                        cols="12"
+                                                        sm="6"
+                                                    >
+                                                        <v-text-field
+                                                            label="ბარათის ნომერი"
+                                                            required
+                                                        ></v-text-field>
+                                                    </v-col>
+                                                    <v-col
+                                                        cols="12"
+                                                        sm="6"
+                                                    >
+                                                        <v-text-field
+                                                            label="ბარათზე დატანილი სახელი"
+                                                            required
+                                                        ></v-text-field>
+                                                    </v-col>
+                                                    <v-col
+                                                        cols="12"
+                                                        sm="6"
+                                                    >
+                                                        <v-text-field
+                                                            label="CVC"
+                                                            required
+                                                        ></v-text-field>
+                                                    </v-col>
+                                                </template>
                                             </v-row>
                                         </v-container>
                                     </v-card-text>
@@ -144,7 +174,8 @@ export default {
             order_info: {
                 address: null,
                 number: null
-            }
+            },
+            pay_type: null
         }
     },
     mounted() {

@@ -24,9 +24,7 @@ export default {
         frontFooter
     },
     created() {
-        this.$store.dispatch("front/checkLogin").then(() => {
-            this.getCart()
-        })
+        this.$store.dispatch("front/checkLogin").then(() => {})
     },
     methods: {
         getCart() {

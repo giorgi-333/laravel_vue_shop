@@ -5,7 +5,7 @@
       v-tab(:to="{name: 'home'}" exact) {{ $t("home") }}
       v-tab(:to="{name: 'products'}" exact) {{ $t("products") }}
       v-tab(:to="{name: 'about'}" exact) {{ $t("about_us") }}
-      v-tab(:to="{name: 'admin'}" exact) admin
+      //v-tab(:to="{name: 'admin'}" exact) admin
     v-switch(
       v-model="$vuetify.theme.dark"
       color="secondary"

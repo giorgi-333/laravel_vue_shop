@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Added Regitser for front">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/front/cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/front/cart.vue" afterDir="false" />
-    </list>
+    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Added pay in cart.vue" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -302,7 +299,7 @@
       <workItem from="1656527259339" duration="2288000" />
       <workItem from="1656582222538" duration="149000" />
       <workItem from="1656597156686" duration="9866000" />
-      <workItem from="1656658071267" duration="6577000" />
+      <workItem from="1656658071267" duration="7200000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Project 2">
       <created>1650572940656</created>
@@ -521,7 +518,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656664127749</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Added pay in cart.vue">
+      <created>1656669346391</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1656669346391</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -540,7 +544,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="uh" />
     <MESSAGE value="Added login - back" />
     <MESSAGE value="Added admin login - front - back fix" />
     <MESSAGE value="Fix admin login and lang changing" />
@@ -565,7 +568,8 @@
     <MESSAGE value="Added login for front" />
     <MESSAGE value="Added login for front 2" />
     <MESSAGE value="Added Regitser for front" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Regitser for front" />
+    <MESSAGE value="Added pay in cart.vue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added pay in cart.vue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

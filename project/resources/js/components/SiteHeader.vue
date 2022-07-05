@@ -100,7 +100,6 @@ export default {
     }
   },
   mounted() {
-    this.setCartLength()
     this.activeLang = this.$store.state.lang
   },
   methods: {
@@ -115,11 +114,11 @@ export default {
       this.$store.state.front.isLogged = false
     },
     setCartLength() {
-      this.cartLength = this.$store.state.front.cartCount
+      this.cartLength = this.$store.state.front.cart.all
     }
   },
   watch: {
-    '$store.state.front.cartCount'() {
+    '$store.state.front.cart'() {
       this.setCartLength()
     }
   }

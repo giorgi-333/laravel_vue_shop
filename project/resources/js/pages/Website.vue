@@ -30,8 +30,7 @@ export default {
         getCart() {
             request.get('/api/cart')
                 .then((res) => {
-                    this.cart = res.data
-                    this.$store.state.front.cartCount = res.data.all
+                    this.$store.state.front.cart = res.data
                 })
         }
     },

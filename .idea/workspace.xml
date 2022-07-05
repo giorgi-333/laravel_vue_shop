@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Fix cart requst">
+    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Fixed cart price sum">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/app/Http/Controllers/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/project/app/Http/Controllers/cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/SiteHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/Website.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/Website.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/pages/front/cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/pages/front/cart.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/resources/js/store/frontAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/store/frontAuth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,6 +308,7 @@
       <workItem from="1656597156686" duration="9866000" />
       <workItem from="1656658071267" duration="11230000" />
       <workItem from="1656948400006" duration="2115000" />
+      <workItem from="1657001646254" duration="1070000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Project 2">
       <created>1650572940656</created>
@@ -536,7 +541,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656678713290</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Fixed cart price sum">
+      <created>1657001794278</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1657001794278</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +567,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added admin login - front - back fix" />
     <MESSAGE value="Fix admin login and lang changing" />
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="Added products store test working for multi language" />
@@ -580,7 +591,8 @@
     <MESSAGE value="Added Regitser for front" />
     <MESSAGE value="Added pay in cart.vue" />
     <MESSAGE value="Fix cart requst" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix cart requst" />
+    <MESSAGE value="Fixed cart price sum" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed cart price sum" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

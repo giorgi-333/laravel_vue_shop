@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <lang-changed @langChanged="getCart"/>
+        <lang-changed />
         <v-row>
             <v-col md="8">
                 <v-card class="mb-2">
@@ -9,7 +9,7 @@
                         კალათა
                     </v-card-title>
                 </v-card>
-                <v-list two-line>
+                <v-list two-line v-if="cart && cart.list && cart.list.length">
                     <template v-for="(item,i) in cart.list">
                         <v-list-item>
                             <!-- image -->
@@ -36,7 +36,7 @@
                     </template>
                 </v-list>
             </v-col>
-            <v-col md="4">
+            <v-col md="4" v-if="cart && cart.sum">
                 <v-card class="mt-3">
                     <v-row>
                         <v-col md="6">
@@ -165,11 +165,6 @@ export default {
     components: {LangChanged},
     data() {
         return {
-            cart: {
-                list: [],
-                sum: null,
-                all: null
-            },
             dialog: false,
             order_info: {
                 address: null,
@@ -178,17 +173,12 @@ export default {
             pay_type: null
         }
     },
-    mounted() {
-        this.getCart()
+    computed: {
+        cart() {
+            return this.$store.state.front.cart
+        }
     },
     methods: {
-        getCart() {
-            request.get('/api/cart')
-                .then((res) => {
-                    this.cart = res.data
-                    this.$store.state.front.cartCount = res.data.all
-                })
-        },
         buy() {
             request.post('/api/products/buy', {
                 list: this.cart.list,
@@ -198,11 +188,6 @@ export default {
                     console.log(res);
                     this.dialog = false
                 })
-        }
-    },
-    watch: {
-        '$store.state.front.isLogged'() {
-            this.getCart()
         }
     }
 }

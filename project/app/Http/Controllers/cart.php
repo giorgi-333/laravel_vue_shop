@@ -69,4 +69,17 @@ class cart extends Controller
         ]);
 
     }
+
+    public function delete($slug)
+    {
+        $product = DB::table('product')->where("slug", "=", $slug)->first();
+        $product = json_decode(json_encode($product), true);
+
+        DB::table('product')->where("slug", "=", $slug)->delete();
+        DB::table('product_transitions')->where("product_id", "=", $product['id'])->delete();
+
+        return response()->json([
+            'info' => 'deleted'
+        ]);
+    }
 }

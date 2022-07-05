@@ -64,8 +64,8 @@ export default {
 
                 //
                 return request.post('/api/create-user', this.loginData)
-                    .then((res) => {
-                        console.log(res);
+                    .then(() => {
+                        this.show = false
                     })
             }
         },

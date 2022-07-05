@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <lang-changed />
+        <lang-changed/>
         <v-row>
             <v-col md="8">
                 <v-card class="mb-2">
@@ -27,7 +27,7 @@
                             </v-list-item-content>
                             <!-- actions -->
                             <v-list-item-action>
-                                <v-btn icon>
+                                <v-btn icon @click="deleteItem(item)">
                                     <v-icon color="red darken-2">mdi-delete</v-icon>
                                 </v-btn>
                             </v-list-item-action>
@@ -157,8 +157,9 @@
 </template>
 
 <script>
-import {request} from "../../app";
 import LangChanged from "../../components/langChanged";
+//
+import {request, bus} from "../../app";
 
 export default {
     name: "cart",
@@ -185,9 +186,17 @@ export default {
                 info: this.order_info
             })
                 .then((res) => {
-                    console.log(res);
                     this.dialog = false
                 })
+        },
+        deleteItem(item) {
+            console.log(item.product_id);
+
+            request.delete(`/api/cart/${item.product_id}`)
+                .then(() => {
+                    bus.$emit('cart-changed')
+                })
+
         }
     }
 }

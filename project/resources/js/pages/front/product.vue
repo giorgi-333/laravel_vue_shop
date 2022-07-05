@@ -83,7 +83,7 @@
 
 <script>
 import langChanged from "../../components/langChanged";
-import {request} from "../../app";
+import {bus, request} from "../../app";
 
 export default {
     name: "product",
@@ -152,14 +152,8 @@ export default {
                 count: this.sale.count,
                 price: this.sale.price
             })
-                .then((res) => {
-                    this.getCart()
-                })
-        },
-        getCart() {
-            request.get('/api/cart')
-                .then((res) => {
-                    this.$store.state.front.cartCount = res.data.all
+                .then(() => {
+                    bus.$emit('cart-changed')
                 })
         }
     }

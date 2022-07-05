@@ -19,11 +19,11 @@ export default {
 
             if (this.main) {
                 request.defaults.headers["Accept-Language"] = val
-            } else {
-                this.$nextTick(() => {
-                    this.$emit("langChanged")
-                })
             }
+            this.$nextTick(() => {
+                this.$emit("langChanged")
+            })
+
         }
     }
 }

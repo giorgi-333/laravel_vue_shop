@@ -4,7 +4,7 @@
             site-header
             .pt-16
                 router-view
-            langChanged(main="true")
+            langChanged(main="true" @langChanged="getCart")
         front-footer
 </template>
 
@@ -14,7 +14,7 @@ import frontFooter from "../components/front/footer";
 //
 import langChanged from "../components/langChanged";
 //
-import {request} from "../app";
+import {bus, request} from "../app";
 
 export default {
     name: "Website",
@@ -24,19 +24,28 @@ export default {
         frontFooter
     },
     created() {
-        this.$store.dispatch("front/checkLogin").then(() => {})
+        this.$store.dispatch("front/checkLogin").then(() => {
+        })
+        //
+        bus.$on("cart-changed", () => {
+            this.getCart()
+        });
     },
     methods: {
         getCart() {
             request.get('/api/cart')
                 .then((res) => {
                     this.$store.state.front.cart = res.data
-                })
+                }).catch(() => {
+                this.$store.state.front.cart = {}
+            })
         }
     },
     watch: {
         '$store.state.front.isLogged'() {
-            this.getCart()
+            this.$nextTick(()=> {
+                this.getCart()
+            })
         }
     }
 }
@@ -48,6 +57,7 @@ export default {
     padding: 0;
     box-sizing: border-box;
 }
+
 .content {
     min-height: calc(100vh - 161px);
     padding-bottom: 40px;

@@ -32,6 +32,7 @@ Route::post('/api/products/buy', [products::class, 'buy'])->middleware(['auth:sa
 // cart
 Route::get('/api/cart',[cart::class, 'index'])->middleware('auth:sanctum');
 Route::post('/api/cart',[cart::class, 'store'])->middleware('auth:sanctum');
+Route::delete('/api/cart/{id}', [cart::class, 'delete'])->middleware('auth:sanctum');
 
 //users - admin
 Route::post('/api/admin/me', [AuthController::class, 'me'])->middleware(['auth:sanctum','abilities:admin:full']);

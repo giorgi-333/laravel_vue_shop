@@ -9,7 +9,7 @@ import store from './store/index'
 import axios from 'axios'
 import i18n from "./plugins/translate";
 
-// export const bus = new Vue();
+export const bus = new Vue();
 
 
 // axios

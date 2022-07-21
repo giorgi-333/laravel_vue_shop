@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Updated cart data show for front">
+    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Updated products-table.vue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/resources/js/components/admin/products-table.vue" beforeDir="false" afterPath="$PROJECT_DIR$/project/resources/js/components/admin/products-table.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/public/js/app.js.LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/js/app.js.LICENSE.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +182,7 @@
       <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\public" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.Laravel">
+  <component name="RunManager" selected="npm.prod">
     <configuration name="Laravel" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/project/artisan" scriptParameters="serve">
       <method v="2" />
     </configuration>
@@ -206,6 +206,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="prod" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/project/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="prod" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="watch" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/project/package.json" />
       <command value="run" />
@@ -221,9 +231,11 @@
       <item itemvalue="npm.dev" />
       <item itemvalue="npm.hot" />
       <item itemvalue="PHP Script.Laravel" />
+      <item itemvalue="npm.prod" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.prod" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.hot" />
       </list>
@@ -312,7 +324,7 @@
       <workItem from="1658080095373" duration="84000" />
       <workItem from="1658212451415" duration="617000" />
       <workItem from="1658346116308" duration="1857000" />
-      <workItem from="1658387838007" duration="326000" />
+      <workItem from="1658387838007" duration="2289000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Project 2">
       <created>1650572940656</created>
@@ -566,7 +578,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657006457523</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Updated products-table.vue">
+      <created>1658388262741</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1658388262741</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,7 +604,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="workspace.xml" />
     <MESSAGE value="Added products store test working for multi language" />
     <MESSAGE value="Added product price and kg inputs for sale" />
     <MESSAGE value="Updated product price and kg inputs for sale" />
@@ -610,7 +628,8 @@
     <MESSAGE value="Fix cart requst" />
     <MESSAGE value="Fixed cart price sum" />
     <MESSAGE value="Updated cart data show for front" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated cart data show for front" />
+    <MESSAGE value="Updated products-table.vue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated products-table.vue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

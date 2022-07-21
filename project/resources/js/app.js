@@ -14,7 +14,6 @@ export const bus = new Vue();
 
 // axios
 let request = axios.create({
-    // timeout: 2000,
     headers: { 'Accept-Language': store.state.lang }
 });
 export { request };

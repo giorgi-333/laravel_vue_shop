@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Updated products-table.vue">
+      <change afterPath="$PROJECT_DIR$/project/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/public/js/app.js.LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/js/app.js.LICENSE.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +182,7 @@
       <recent name="C:\Users\windows 10\Desktop\img modal\laravel\laravel_vue_shop\project\public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.prod">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="Laravel" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/project/artisan" scriptParameters="serve">
       <method v="2" />
     </configuration>
@@ -230,13 +230,13 @@
       <item itemvalue="npm.watch" />
       <item itemvalue="npm.dev" />
       <item itemvalue="npm.hot" />
-      <item itemvalue="PHP Script.Laravel" />
       <item itemvalue="npm.prod" />
+      <item itemvalue="PHP Script.Laravel" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.prod" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.prod" />
         <item itemvalue="npm.hot" />
       </list>
     </recent_temporary>

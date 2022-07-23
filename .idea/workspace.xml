@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Updated products-table.vue">
-      <change afterPath="$PROJECT_DIR$/project/.htaccess" afterDir="false" />
+    <list default="true" id="29b2cacd-2755-4ea2-ac46-fb03d85a1485" name="Changes" comment="Added .htdocs for hosting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/js/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,6 +322,8 @@
       <workItem from="1658212451415" duration="617000" />
       <workItem from="1658346116308" duration="1857000" />
       <workItem from="1658387838007" duration="2289000" />
+      <workItem from="1658495947733" duration="41000" />
+      <workItem from="1658497744703" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="Inital Project 2">
       <created>1650572940656</created>
@@ -585,7 +584,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658388262741</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Added .htdocs for hosting">
+      <created>1658402163311</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1658402163311</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -604,7 +610,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added products store test working for multi language" />
     <MESSAGE value="Added product price and kg inputs for sale" />
     <MESSAGE value="Updated product price and kg inputs for sale" />
     <MESSAGE value="Add to cart - localstorage" />
@@ -629,7 +634,8 @@
     <MESSAGE value="Fixed cart price sum" />
     <MESSAGE value="Updated cart data show for front" />
     <MESSAGE value="Updated products-table.vue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated products-table.vue" />
+    <MESSAGE value="Added .htdocs for hosting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added .htdocs for hosting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
